@@ -3,7 +3,7 @@ let mix = require('laravel-mix');
 mix.postCss("src/app.css", "css", [
     require("tailwindcss"),
 ])
-.browserSync('http://leuver.ink.test')
+.copy('src/fonts', 'dist/fonts')
 .disableSuccessNotifications()
 .setPublicPath('dist')
 .sourceMaps()
