@@ -7,18 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Project X</title>
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
+    <!-- TODO: remove Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Alpine JS -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- TODO: remove Tailwind JIT CDN -->
     <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+
+    <!-- TODO: create local Tailwind config file -->
+    <script type="tailwind-config">
+        {
+            theme: {
+                fontFamily: {
+                    'sans': [ 'Cabin', ... ],
+                }
+            }
+        }
+    </script>
+
 </head>
-<body>
+<body class="font-sans antialiased">
 
-    <h1 class="text-2xl">Project X</h1>
-    <h2>Homegrown web app development</h2>
+    <main  role="main" class="mx-4 my-6 md:mx-8 md:my-10">
 
-    <p>
+        <h1 class="text-3xl">Hi, I’m Willem</h1>
+        <h2 class="text-xl">Maker of things on the web</h2>
 
-    </p>
+        <p>
+            <!-- // -->
+        </p>
+
+    </main>
 
 </body>
 </html>
