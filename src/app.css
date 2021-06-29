@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tailwind components */
+::selection {
+    @apply bg-cyan-100;
+}
+
+/* Misc */
+html { scroll-behavior: smooth;  }
+
+code { font-family: MonoLisa, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace }
