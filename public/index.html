@@ -21,9 +21,23 @@
 
         <header class="mt-8 md:mt-12 mb-8 sm:mb-12 md:mb-16 px-4 md:px-8 bg-white leading-tight">
 
-            <div role="banner">
-                <h1 class="text-3xl font-semibold text-purple-700">Hi, I’m Willem</h1>
-                <h2 class="text-xl">and i make things</h2>
+            <div role="banner" class="flex space-x-4">
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.57 68.28" class="w-16 text-pink-600">
+                    <defs>
+                        <linearGradient x1="50%" y1="92.034%" x2="50%" y2="7.2%" id="logo-gradient">
+                          <stop offset="0%" stop-color="purple" />
+                          <stop offset="100%" stop-color="currentColor" />
+                        </linearGradient>
+                    </defs>
+
+                    <path fill="currentColor" style="fill: url(#logo-gradient)" fill-opacity=".8" d="M35.14 68.18C24 67.53 13 62.1 6.3 53a455.08 455.08 0 0167.09-7.3C67.51 60.72 50.8 69.34 35.14 68.18zM2.69 46.85a31 31 0 01-1.45-3.94c12.93-1.7 25.93-2.83 38.93-3.87 11.74-.61 23.48-1.34 35.24-1.25-.14 1-.26 2.08-.5 3.09-11.2.42-22.34 1.56-33.5 2.52-12.57 1.71-25.17 3.18-37.6 5.73-.41-.74-.81-1.51-1.12-2.28zM.51 39.69a26.42 26.42 0 01-.47-7c25-3.08 50.2-3.25 75.31-2.6.22.65 0 1.45.22 2V34A594.93 594.93 0 00.65 40.5c-.05-.27-.09-.5-.14-.81zm-.3-9.33a31.39 31.39 0 012-7.65c23.05-1.9 46.12-3.63 69.25-4.23a30.58 30.58 0 013.47 8.91c-24.95-.26-50 .35-74.75 3.84.03-.23-.07-.58.03-.87zm2.37-8.64C8.21 8.53 22.39.44 36.39 0c13.35-.45 27.17 5.8 34.33 17.32-22.79.75-45.52 2.59-68.23 4.58z"/>
+                </svg>
+
+                <div>
+                    <h1 class="text-3xl font-semibold text-purple-800">Hi, I’m Willem</h1>
+                    <h2 class="text-xl">and i make things</h2>
+                </div>
             </div>
 
 
@@ -31,13 +45,14 @@
                 x-effect="open
                     ? document.body.classList.add('overflow-hidden')
                     : document.body.classList.remove('overflow-hidden')"
-                class="md:hidden relative flex flex-col"> <!-- MOBILE NAV-->
+                class="md:hidden relative flex flex-col"
+            > <!-- MOBILE NAV-->
 
                 <button x-on:click="open = !open" class="absolute right-0 -top-12 bg-gray-700 border-b-3 border-gray-900 text-white uppercase tracking-wider font-bold p-2 pb-1">
                     Menu
                 </button>
 
-                <nav x-show="open" x-cloak x-transition class="flex flex-col justify-center min-h-screen text-2xl text-center text-gray-700 -mt-16 px-8 pt-10 pb-2">
+                <nav x-show="open" x-cloak x-transition class="flex flex-col justify-center min-h-screen text-3xl text-center text-gray-00 -mt-20 px-8 pt-10 pb-2">
 
                     <a href="#" class="font-bold text-black exact-active">
                         Home
@@ -88,25 +103,33 @@
 
             <main  role="main" class="flex-1 min-w-0 px-4 md:px-12 lg:pl-24 lg:pr-16">
 
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptas repudiandae omnis suscipit fuga asperiores reprehenderit sit adipisci autem nulla, voluptates alias nihil magnam expedita facere voluptatum accusantium dolorem id!
-                </p>
+                <article class="mb-12 md:mb-24'">
 
-                <p class="mt-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptas repudiandae omnis suscipit fuga asperiores reprehenderit sit adipisci autem nulla, voluptates alias nihil magnam expedita facere voluptatum accusantium dolorem id!
-                </p>
+                    <header class="mb-6">
+                        <a href="#">
 
-                <p class="mt-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptas repudiandae omnis suscipit fuga asperiores reprehenderit sit adipisci autem nulla, voluptates alias nihil magnam expedita facere voluptatum accusantium dolorem id!
-                </p>
+                            <h2 class="max-w-lg text-2xl md:text-3xl font-bold leading-tight mb-1">
+                                A Laravel package to dispatch jobs via Artisan
+                            </h2>
 
-                <p class="mt-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptas repudiandae omnis suscipit fuga asperiores reprehenderit sit adipisci autem nulla, voluptates alias nihil magnam expedita facere voluptatum accusantium dolorem id!
-                </p>
+                            <p class="text-lg text-gray-700">
+                                <time datetime="2021-06-14T17:36:12+02:00">Jun 14th 2021</time> – 3 minute read
+                            </p>
 
-                <p class="mt-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptas repudiandae omnis suscipit fuga asperiores reprehenderit sit adipisci autem nulla, voluptates alias nihil magnam expedita facere voluptatum accusantium dolorem id!
-                </p>
+                        </a>
+                    </header>
+
+                    <div class="prose text-xl leading-relaxed">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptas repudiandae omnis suscipit fuga asperiores reprehenderit sit adipisci autem nulla, voluptates alias nihil magnam expedita facere voluptatum accusantium dolorem id!
+                        </p>
+
+                        <a href="#" class="mt-6">
+                            Read more
+                        </a>
+                    </div>
+
+                </article>
 
             </main>
 
