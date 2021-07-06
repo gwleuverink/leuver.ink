@@ -15,18 +15,104 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 </head>
-<body class="antialiased">
+<body class="font-sans text-gray-900 antialiased">
 
-    <main  role="main" class="mx-4 my-6 md:mx-8 md:my-10">
+    <div class="max-w-xl md:max-w-5xl mx-auto"> <!-- WRAPPER -->
 
-        <h1 class="text-3xl font-semibold text-purple-700">Hi, I’m Willem</h1>
-        <h2 class="text-xl">Maker of things on the web</h2>
+        <header class="mt-8 md:mt-12 mb-8 sm:mb-12 md:mb-16 px-4 md:px-8 bg-white leading-tight">
 
-        <p>
-            <!-- // -->
-        </p>
+            <div role="banner">
+                <h1 class="text-3xl font-semibold text-purple-700">Hi, I’m Willem</h1>
+                <h2 class="text-xl">and i make things</h2>
+            </div>
 
-    </main>
+
+            <div x-data="{ open: true }"
+                x-effect="open
+                    ? document.body.classList.add('overflow-hidden')
+                    : document.body.classList.remove('overflow-hidden')"
+                class="md:hidden relative flex flex-col"> <!-- MOBILE NAV-->
+
+                <button x-on:click="open = !open" class="absolute right-0 -top-12 bg-gray-700 border-b-3 border-gray-900 text-white uppercase tracking-wider font-bold p-2 pb-1">
+                    Menu
+                </button>
+
+                <nav x-show="open" x-cloak x-transition class="flex flex-col justify-center min-h-screen text-2xl text-center text-gray-700 -mt-16 px-8 pt-10 pb-2">
+
+                    <a href="#" class="font-bold text-black exact-active">
+                        Home
+                    </a>
+
+                    <a href="#">
+                        Writings
+                    </a>
+
+                    <a href="#" class="mt-4">
+                        About
+                    </a>
+
+                    <a href="#">
+                        Using
+                    </a>
+
+                </nav>
+
+            </div> <!-- END MOBILE NAV-->
+        </header>
+
+        <div class="md:flex pb-12 text-xl">
+
+            <aside class="hidden md:block w-1/4 lg:w-1/5 text-right leading-loose">
+
+                <nav class="flex flex-col sticky top-4 border-r border-gray-200 text-gray-700 px-8 py-2 mb-16"> <!-- DESKTOP NAV-->
+
+                    <a href="#" class="font-bold text-black exact-active">
+                        Home
+                    </a>
+
+                    <a href="#">
+                        Writings
+                    </a>
+
+                    <a href="#" class="mt-4">
+                        About
+                    </a>
+
+                    <a href="#">
+                        Using
+                    </a>
+
+                </nav> <!-- END DESKTOP NAV-->
+
+            </aside>
+
+            <main  role="main" class="flex-1 min-w-0 px-4 md:px-12 lg:pl-24 lg:pr-16">
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptas repudiandae omnis suscipit fuga asperiores reprehenderit sit adipisci autem nulla, voluptates alias nihil magnam expedita facere voluptatum accusantium dolorem id!
+                </p>
+
+                <p class="mt-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptas repudiandae omnis suscipit fuga asperiores reprehenderit sit adipisci autem nulla, voluptates alias nihil magnam expedita facere voluptatum accusantium dolorem id!
+                </p>
+
+                <p class="mt-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptas repudiandae omnis suscipit fuga asperiores reprehenderit sit adipisci autem nulla, voluptates alias nihil magnam expedita facere voluptatum accusantium dolorem id!
+                </p>
+
+                <p class="mt-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptas repudiandae omnis suscipit fuga asperiores reprehenderit sit adipisci autem nulla, voluptates alias nihil magnam expedita facere voluptatum accusantium dolorem id!
+                </p>
+
+                <p class="mt-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptas repudiandae omnis suscipit fuga asperiores reprehenderit sit adipisci autem nulla, voluptates alias nihil magnam expedita facere voluptatum accusantium dolorem id!
+                </p>
+
+            </main>
+
+        </div>
+
+    </div> <!-- END WRAPPER -->
 
 </body>
 </html>

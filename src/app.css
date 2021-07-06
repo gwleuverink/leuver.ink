@@ -44,3 +44,6 @@ code { font-family: MonoLisa, Menlo, Monaco, Consolas, "Liberation Mono", "Couri
 
 /* Misc */
 html { scroll-behavior: smooth;  }
+
+/* Alpine JS */
+[x-cloak] { display: none !important; }
