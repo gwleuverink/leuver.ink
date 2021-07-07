@@ -1,6 +1,8 @@
 let mix = require('laravel-mix');
 
-mix.postCss("src/app.css", "css", [
+mix
+.css("src/font.css", "css")
+.postCss("src/app.css", "css", [
     require("tailwindcss"),
 ])
 .copy('src/fonts', 'dist/fonts')
