@@ -2,7 +2,7 @@
 
 return [
     'production' => false,
-    'baseUrl' => '',
+    'baseUrl' => 'https://leuver.ink/',
     'title' => 'Project X',
     'description' => 'Website description.',
     'collections' => [],

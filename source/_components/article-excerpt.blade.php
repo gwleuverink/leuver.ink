@@ -1,4 +1,4 @@
-<article {{ $attributes->class() }}>
+<article {{ $attributes }}>
 
     <header class="mb-6">
         <a href="#">
