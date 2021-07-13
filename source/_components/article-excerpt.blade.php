@@ -1,4 +1,10 @@
-<article {{ $attributes }}>
+
+<article {{ $attributes }}
+    x-data="{ shown: false }"
+    x-intersect.once="shown = true"
+    :class="shown ? 'opacity-100' : 'opacity-0'"
+    class="transition-opacity duration-300 delay-300 ease-in"
+>
 
     <header class="mb-6">
         <a href="#">
@@ -23,5 +29,7 @@
             Read more
         </a>
     </div>
+
+    <x-separator />
 
 </article>
