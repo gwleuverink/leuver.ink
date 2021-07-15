@@ -1,10 +1,9 @@
 
 @extends('_layouts.layout')
 
-
 @section('content')
 
-    <article class="prose prose-xl">
+    <div class="prose prose-xl">
 
         <p role="heading">Since you got this far, I might as well bore you with quick summary of what I do.</p>
 
@@ -16,7 +15,7 @@
             I write about the things I make, which are usually Livewire/Laravel related, but I might venture to write about other things too. Like home automation, arduino projects or small woodworking things I tinker on.
         </p>
 
-    </article>
+    </div>
 
     <div class="relative mt-10 mb-12 bg-gray-100 prose prose-xl">
         <div class="px-6 py-6">

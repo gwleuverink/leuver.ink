@@ -18,8 +18,6 @@
     <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-
-
 </head>
 <body x-init="$el.classList.remove('opacity-0')" class="font-sans text-gray-900 antialiased transition-opacity duration-300 opacity-0">
 
