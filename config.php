@@ -8,7 +8,11 @@ return [
     'title' => 'Project X',
     'description' => 'Website description.',
 
-    'collections' => [],
+    'collections' => [
+        'posts' => [
+            'path' => 'blog/{date|Y-m-d}/{filename}',
+        ],
+    ],
 
     'selected' => function ($page, $section) {
         return $page->getPath() === $section || Str::contains($page->getPath(), $section) ? 'font-bold text-black' : '';
