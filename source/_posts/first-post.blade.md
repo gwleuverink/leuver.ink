@@ -1,12 +1,13 @@
 ---
+extends: _layouts.blog
+section: article
+
 title: My First Blog Post
 date: 2021-07-21
-section: content
+excerpt: Lorem ipsum dolor sit amet. Hare ichtum vendi vide vasitum
 ---
 
-@extends('_layouts.main')
-
-# {{ $title }}
-## {{ $date }}
+# {{ $page->title }}
+## {{ date('F j, Y', $page->date) }}
 
 Lorem ipsum dolor sit amet.

@@ -1,3 +1,8 @@
+---
+pagination:
+  collection: posts
+  perPage: 5
+---
 
 @extends('_layouts.main')
 
@@ -25,16 +30,10 @@
         <div class="absolute bottom-0 h-2 w-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"></div>
     </div>
 
-    <x-article-excerpt />
+    @foreach ($pagination->items as $post)
 
-    <x-article-excerpt />
+        <x-article-excerpt :post="$post" :divider="! $loop->last" />
 
-    <x-article-excerpt />
-
-    <x-article-excerpt />
-
-    <x-article-excerpt />
-
-    <x-article-excerpt />
+    @endforeach
 
 @endsection

@@ -11,7 +11,7 @@ return [
     'collections' => [
         'posts' => [
             'path' => 'blog/{date|Y-m-d}/{filename}',
-        ],
+        ]
     ],
 
     'selected' => function ($page, $section) {
