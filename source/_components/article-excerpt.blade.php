@@ -18,7 +18,7 @@
             </h2>
 
             <p class="text-lg text-gray-700">
-                <time datetime="2021-06-14T17:36:12+02:00">{{ date('F j, Y', $post->date) }}</time> – 3 minute read
+                <time datetime="{{ date('Y-m-d\TH:i:s') }}">{{ date('F j, Y', $post->date) }}</time> – {{ $post->readTime }}
             </p>
 
         </a>

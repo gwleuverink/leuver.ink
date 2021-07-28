@@ -1,22 +1,17 @@
+---
+pagination:
+  collection: posts
+  perPage: 15
+---
 
 @extends('_layouts.main')
 
 @section('content')
 
-<x-article-excerpt />
+    @foreach ($pagination->items as $post)
 
-<x-article-excerpt />
+        <x-article-excerpt :post="$post" :divider="! $loop->last" />
 
-<x-article-excerpt />
-
-<x-article-excerpt />
-
-<x-article-excerpt />
-
-<x-article-excerpt />
-
-<x-article-excerpt />
-
-<x-article-excerpt />
+    @endforeach
 
 @endsection
