@@ -27,7 +27,7 @@
     <div class="prose prose-xl leading-relaxed">
 
         <p>
-            {{ \Illuminate\Support\Str::limit($post->excerpt, 100, '...') }}
+            {{ $post->getExcerpt() }}
         </p>
 
         <a href="{{ $post->getUrl() }}" class="mt-6">

@@ -1,9 +1,5 @@
 @extends('_layouts.main')
 
-@push('scripts')
-<script defer src="https://unpkg.com/shiki@0.9.5/dist/index.unpkg.iife.js"></script>
-@endpush
-
 @section('content')
 {{--
 <div class="h-2 mb-6 w-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"></div>
