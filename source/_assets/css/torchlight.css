@@ -28,7 +28,7 @@ pre {
 
 pre code.torchlight {
 
-    @apply block py-4 min-w-max;
+    @apply text-sm leading-loose block py-4 min-w-max;
 
 }
 
