@@ -4,9 +4,12 @@
 /vendor/
 /.idea/
 /.vscode/
+/torchlight_cache/
 npm-debug.log
 .DS_Store
 .DS_Store?
+
+.env
 
 # Optional ignores
 /build_staging/

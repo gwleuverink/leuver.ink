@@ -1,10 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "torchlight";
 
 /* Tailwind components */
 ::selection {
     @apply bg-cyan-100;
+}
+
+.prose-xl pre {
+    @apply px-0 -mx-4 sm:mx-auto;
 }
 
 /* Misc */
