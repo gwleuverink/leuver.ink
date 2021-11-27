@@ -16,18 +16,20 @@
 
     <!-- Alpine JS -->
     <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/trap@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- Script stack -->
     @stack('scripts')
 
 </head>
-<body x-init="$el.classList.remove('opacity-0')" class="font-sans text-gray-900 antialiased transition-opacity duration-300 opacity-0">
+<body x-init="$el.classList.remove('opacity-0')" class="font-sans antialiased text-gray-900 transition-opacity duration-300 opacity-0">
 
     {{-- WRAPPER --}}
-    <div class="max-w-xl md:max-w-5xl mx-auto">
+    <div class="max-w-xl mx-auto md:max-w-5xl">
 
-        <header class="mt-8 md:mt-12 mb-8 sm:mb-12 md:mb-16 px-4 md:px-8 bg-white leading-tight">
+        <header class="px-4 mt-8 mb-8 leading-tight bg-white md:mt-12 sm:mb-12 md:mb-16 md:px-8">
 
             <x-logo />
 
@@ -36,14 +38,14 @@
                 x-effect="open
                     ? document.body.classList.add('overflow-hidden')
                     : document.body.classList.remove('overflow-hidden')"
-                class="md:hidden relative flex flex-col"
+                class="relative flex flex-col md:hidden"
             >
 
-                <button x-on:click="open = !open" class="absolute right-0 -top-12 bg-gray-700 border-b-3 border-gray-900 text-white uppercase tracking-wider font-bold p-2 pb-1">
+                <button x-on:click="open = !open" class="absolute right-0 p-2 pb-1 font-bold tracking-wider text-white uppercase bg-gray-700 border-gray-900 -top-12 border-b-3">
                     Menu
                 </button>
 
-                <nav x-show="open" x-cloak x-transition class="flex flex-col justify-center min-h-screen text-3xl text-center text-gray-00 -mt-20 px-8 pt-10 pb-2">
+                <nav x-show="open" x-cloak x-transition class="flex flex-col justify-center min-h-screen px-8 pt-10 pb-2 -mt-20 text-3xl text-center text-gray-00">
 
                     @include('_partials.nav-links')
 
@@ -54,12 +56,12 @@
 
         </header>
 
-        <div class="md:flex pb-12 text-xl">
+        <div class="pb-12 text-xl md:flex">
 
             {{-- DESKTOP NAV --}}
-            <aside class="hidden md:block w-1/4 lg:w-1/5 text-right leading-loose">
+            <aside class="hidden w-1/4 leading-loose text-right md:block lg:w-1/5">
 
-                <nav class="flex flex-col sticky top-4 border-r border-gray-200 text-gray-700 px-8 py-2 mb-16">
+                <nav class="sticky flex flex-col px-8 py-2 mb-16 text-gray-700 border-r border-gray-200 top-4">
 
                     @include('_partials.nav-links')
 
@@ -79,6 +81,8 @@
     </div>
     {{-- END WRAPPER --}}
 
+
+    @include('_partials.konami-code')
     @include('_partials.svg-definitions')
 
 </body>
