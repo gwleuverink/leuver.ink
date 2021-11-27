@@ -24,7 +24,7 @@ pagination:
 
     <div class="relative mt-10 mb-12 bg-gray-100 prose prose-xl">
         <div class="px-6 py-6">
-            <p>Below you'll find my latest writings. Check <a href="#">here</a> for the full archive, or subscribe to the <a href="#">RSS feed</a></p>
+            <p>Below you'll find my latest writings. Check <a href="/blog">here</a> for the full archive, or subscribe to the <a href="/feed.atom">RSS feed</a></p>
         </div>
 
         <div class="absolute bottom-0 h-2 w-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"></div>
