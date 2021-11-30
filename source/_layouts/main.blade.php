@@ -22,7 +22,6 @@
 
     <!-- Script stack -->
     @stack('scripts')
-
 </head>
 <body x-init="$el.classList.remove('opacity-0')" class="font-sans antialiased text-gray-900 transition-opacity duration-300 opacity-0">
 
