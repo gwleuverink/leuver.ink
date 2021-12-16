@@ -1,4 +1,4 @@
-<a href="{{ $page->baseUrl }}" class="{{ $page->selected('') }}">
+<a href="{{ $page->baseUrl }}" class="{{ $page->selected('/') }}">
     Home
 </a>
 

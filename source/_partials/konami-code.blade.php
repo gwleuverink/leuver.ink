@@ -19,6 +19,7 @@ Flashes an isnspiring mesage after the konami code is entered
         if (sequence.length === sequenceIndex + 1) {
             open = true
             sequenceIndex = 0
+            quote = selectRandom()
             return setTimeout(() => { open = false }, 4000)
         }
 
@@ -59,9 +60,9 @@ Flashes an isnspiring mesage after the konami code is entered
         }}`),
     }"
     class="fixed inset-0 flex items-center justify-center bg-white"
-    role="the-tao konami-code"
+    role=" konami-code"
 >
-    <div class="prose prose-2xl text-gray-600">
+    <div class="text-gray-600 prose prose-2xl">
         <blockquote x-text="quote"></blockquote>
     </div>
 </div>

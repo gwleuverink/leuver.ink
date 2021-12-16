@@ -1,3 +1,3 @@
-<div class="flex justify-center md:justify-start my-10">
+<div role="separator" class="flex justify-center my-10 md:justify-start">
     <x-svg.slash-wave class="h-4 " />
 </div>

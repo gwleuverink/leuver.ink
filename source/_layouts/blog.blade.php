@@ -2,12 +2,12 @@
 
 @section('content')
 {{--
-<div class="h-2 mb-6 w-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"></div>
+<div class="w-full h-2 mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"></div>
 --}}
 
 <header class="mb-6">
 
-    <h2 class="max-w-lg text-2xl md:text-3xl font-bold leading-tight mb-1">
+    <h2 class="max-w-lg mb-1 text-2xl font-bold leading-tight text-gray-700 md:text-3xl">
         {{ $page->title }}
     </h2>
 

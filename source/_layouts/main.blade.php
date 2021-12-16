@@ -23,7 +23,7 @@
     <!-- Script stack -->
     @stack('scripts')
 </head>
-<body x-init="$el.classList.remove('opacity-0')" class="font-sans antialiased text-gray-900 transition-opacity duration-300 opacity-0">
+<body x-init="$el.classList.remove('opacity-0')" class="font-sans antialiased text-gray-900 opacity-0 transition-opacity duration-300">
 
     {{-- WRAPPER --}}
     <div class="max-w-xl mx-auto md:max-w-5xl">
@@ -34,9 +34,8 @@
 
             {{-- MOBILE NAV --}}
             <div x-data="{ open: false }"
-                x-effect="open
-                    ? document.body.classList.add('overflow-hidden')
-                    : document.body.classList.remove('overflow-hidden')"
+                aria-modal="true"
+                role="mobile-nav"
                 class="relative flex flex-col md:hidden"
             >
 
@@ -44,7 +43,12 @@
                     Menu
                 </button>
 
-                <nav x-show="open" x-cloak x-transition class="flex flex-col justify-center min-h-screen px-8 pt-10 pb-2 -mt-20 text-3xl text-center text-gray-00">
+                <nav x-cloak
+                    x-show="open"
+                    x-transition
+                    x-trap.inert.noscroll="open"
+                    class="flex flex-col justify-center min-h-screen px-8 pt-10 pb-2 -mt-20 text-3xl text-center text-gray-00"
+                >
 
                     @include('_partials.nav-links')
 

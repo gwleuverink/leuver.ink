@@ -1,6 +1,6 @@
 <div x-data="{ animated: $persist(false).using(sessionStorage).as('logo-animated') }"
     x-init="$nextTick(() => animated = true)"
-    class="flex space-x-4 overflow-hidden"
+    class="flex overflow-hidden space-x-4"
     role="banner"
 >
     <span class="w-16 min-h-[64px]">

@@ -7,13 +7,14 @@
     x-data="{ shown: false }"
     x-intersect.once="shown = true"
     :class="shown ? 'opacity-100' : 'opacity-0'"
-    class="transition-opacity duration-300 delay-300 ease-in"
+    class="transition-opacity duration-300 ease-in delay-300"
+    role="fade-in-excerpt"
 >
 
     <header class="mb-6">
         <a href="{{ $post->getUrl() }}">
 
-            <h2 class="max-w-lg text-2xl md:text-3xl font-bold leading-tight mb-1">
+            <h2 class="max-w-lg mb-1 text-2xl font-semibold leading-tight text-gray-700 md:text-3xl">
                 {{ $post->title }}
             </h2>
 
@@ -24,7 +25,7 @@
         </a>
     </header>
 
-    <div class="prose prose-xl leading-relaxed">
+    <div class="leading-relaxed prose prose-xl">
 
         <p>
             {{ $post->getExcerpt() }}
