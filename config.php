@@ -16,7 +16,7 @@ return [
     ],
 
     'selected' => function ($page, $section) {
-        return $page->getPath() === $section || Str::contains($page->getPath(), $section) ? 'font-bold text-black' : '';
+        return $page->getPath() === $section || Str::contains($page->getPath(), ltrim($section, '/')) ? 'font-bold text-black' : '';
     },
 
     'getExcerpt' => function ($page, $length = 255) {
