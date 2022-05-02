@@ -1,13 +1,11 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-    mode: 'jit',
-    purge: [
+    content: require('fast-glob').sync([
         'source/**/*.blade.php',
         'source/**/*.md',
         'source/**/*.html',
-    ],
-    darkMode: false, // or 'media' or 'class'
+    ]),
     theme: {
         fontFamily: {
             sans: [
@@ -28,9 +26,6 @@ module.exports = {
                 cyan: colors.cyan,
             }
         },
-    },
-    variants: {
-        extend: {},
     },
     plugins: [
         require('@tailwindcss/typography'),
