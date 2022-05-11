@@ -13,5 +13,9 @@ mix.jigsaw()
     .options({
         processCssUrls: false,
     })
+    .browserSync({
+        server: 'build_local',
+        files: ['build_*/**'],
+    })
     .sourceMaps()
     .version();
