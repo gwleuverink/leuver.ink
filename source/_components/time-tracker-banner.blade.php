@@ -3,7 +3,7 @@
     <img class="h-28 drop-shadow-xl" src="/assets/images/clickup-time-tracker-logo.png" alt="Time Tracker logo">
 
     <div>
-        <h3 class="text-xl font-semibold text-white">ClickUp Time Tracker</h3>
+        <h3 class="text-xl font-semibold text-white">Time Tracker for ClickUp</h3>
 
         <div class="text-white">
             Frictionless real-time tracking for ClickUp
