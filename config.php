@@ -4,7 +4,7 @@ use Illuminate\Support\Str;
 
 return [
     'production' => false,
-    'baseUrl' => 'http://localhost:3000/',
+    'baseUrl' => 'http://localhost:3001/',
     'title' => 'Project X',
     'description' => 'Website description.',
     'siteAuthor' => 'Willem Leuverink',
