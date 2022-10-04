@@ -6,6 +6,10 @@
     Writings
 </a>
 
+<a href="{{ $page->baseUrl }}software/time-tracker-for-clickup" class="{{ $page->selected('software') }}">
+    Software
+</a>
+
 <a href="{{ $page->baseUrl }}about" class="mt-4 {{ $page->selected('about') }}">
     About
 </a>

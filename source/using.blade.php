@@ -1,3 +1,7 @@
+---
+title: Using
+---
+
 @extends('_layouts.main')
 
 @section('content')
@@ -5,7 +9,7 @@
 <div class="prose prose-xl">
 
     <p>
-        I'm not one whom toots their own horn, so I find it hard to beleive anyone cares a hoot about my so-called `using` page
+        I'm not one whom toots their own horn, so I find it hard to believe anyone cares a hoot about my so-called `using` page
     </p>
 
     <p>
@@ -41,7 +45,7 @@
     <h2>Spatie Laravel packages in general</h2>
     <p>
         I mean, c'mon the rate these people churn out amazingly usefull packages is uncanny. Great support, timely
-        updates. Spatie deserves my undying gratitude. <a href="https://spatie.be/open-source" target="_blank">Check them out!</a>
+        updates. Spatie deserves my undying gratitude (and about 10,000 overdue postcards). <a href="https://spatie.be/open-source" target="_blank">Check them out!</a>
     </p>
 
     <h2>Intelephense</h2>
@@ -72,9 +76,6 @@
         testing and debugging'</i>. That is true and then some. I use it regularly and is an essential essential
         tool in my toolbelt. Get the app <a href="https://usehelo.com/" target="_blank">here</a>.
     </p>
-
-    <h2>iTerm</h2>
-    <p>A highly customizible terminal app. I use it heavily every day</p>
 
 </div>
 

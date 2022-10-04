@@ -1,4 +1,5 @@
 ---
+title: Latest writings
 pagination:
   collection: posts
   perPage: 15

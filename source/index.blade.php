@@ -24,13 +24,15 @@ pagination:
 
     </div>
 
-    <div class="relative mt-10 mb-12 prose prose-xl bg-gray-100">
+    {{-- START | RSS BANNER --}}
+    <div class="relative mt-10 mb-12 prose prose-xl bg-zinc-100">
         <div class="px-6 py-6">
             <p>Below you'll find my latest writings. Check <a href="/blog">here</a> for the full archive, or subscribe to the <a href="/feed.atom">RSS feed</a></p>
         </div>
 
         <div class="absolute bottom-0 w-full h-2 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"></div>
     </div>
+    {{-- END | RSS BANNER --}}
 
     @foreach ($pagination->items as $post)
 
@@ -38,4 +40,5 @@ pagination:
 
     @endforeach
 
+    <x-time-tracker-banner class="mt-12" />
 @endsection

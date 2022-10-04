@@ -17,13 +17,13 @@
     <!-- Alpine JS -->
     <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="https://unpkg.com/@alpinejs/trap@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- Script stack -->
     @stack('scripts')
 </head>
-<body x-init="$el.classList.remove('opacity-0')" class="font-sans antialiased text-gray-900 opacity-0 transition-opacity duration-300">
+<body x-init="$el.classList.remove('opacity-0')" class="font-sans antialiased text-gray-900 transition-opacity duration-300 opacity-0">
 
     {{-- WRAPPER --}}
     <div class="max-w-xl mx-auto md:max-w-5xl">
