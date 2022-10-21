@@ -60,7 +60,7 @@ Flashes an isnspiring mesage after the konami code is entered
         }}`),
     }"
     class="fixed inset-0 flex items-center justify-center bg-white"
-    role=" konami-code"
+    role="konami-code"
 >
     <div class="text-gray-600 prose prose-2xl">
         <blockquote x-text="quote"></blockquote>
