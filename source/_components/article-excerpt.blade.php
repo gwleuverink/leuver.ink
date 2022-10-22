@@ -22,6 +22,14 @@
                 <time datetime="{{ date('Y-m-d\TH:i:s') }}">{{ date('F j, Y', $post->date) }}</time> – {{ $post->readTime }}
             </p>
 
+            @if($post->tags)
+                <div class="space-x-1">
+                    @foreach ($post->tags as $tag)
+                        <x-tag>{{ $tag }}</x-tag>
+                    @endforeach
+                </div>
+            @endif
+
         </a>
     </header>
 
