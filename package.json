@@ -7,14 +7,15 @@
         "prod": "mix --production"
     },
     "devDependencies": {
-        "@tailwindcss/typography": "^0.5.7",
+        "@tailwindcss/typography": "^0.5",
+        "@tailwindcss/forms": "^0.5",
         "autoprefixer": "^10.4",
         "browser-sync": "^2.27",
         "browser-sync-webpack-plugin": "^2.3.0",
         "fast-glob": "^3.2",
-        "laravel-mix": "^6.0.43",
-        "laravel-mix-jigsaw": "^2.0",
+        "laravel-mix": "^6.0",
+        "laravel-mix-jigsaw": "^2.1",
         "postcss": "^8.4",
-        "tailwindcss": "^3.1"
+        "tailwindcss": "^3.2"
     }
 }

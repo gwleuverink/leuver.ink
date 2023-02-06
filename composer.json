@@ -1,7 +1,7 @@
 {
     "require": {
-        "tightenco/jigsaw": "^1.4",
-        "ramsey/uuid": "^4.5",
+        "tightenco/jigsaw": "^1.6",
+        "ramsey/uuid": "^4.7",
         "torchlight/torchlight-jigsaw": "^0.3"
     }
 }
