@@ -12,6 +12,7 @@ return [
     'collections' => [
         'posts' => [
             'path' => 'blog/{date|Y-m-d}/{filename}',
+            'sort' => '-date',
         ]
     ],
 
@@ -36,14 +37,14 @@ return [
             return $cleaned;
         }
 
-        $truncated = substr($cleaned, 0, $length);
+        $truncated = mb_substr($cleaned, 0, $length);
 
-        if (substr_count($truncated, '<code>') > substr_count($truncated, '</code>')) {
+        if (mb_substr_count($truncated, '<code>') > mb_substr_count($truncated, '</code>')) {
             $truncated .= '</code>';
         }
 
-        return strlen($cleaned) > $length
-            ? preg_replace('/\s+?(\S+)?$/', '', $truncated) . '...'
+        return mb_strlen($cleaned) > $length
+            ? preg_replace('/\s+?(\S+)?$/', '', $truncated).'...'
             : $cleaned;
     },
 ];
