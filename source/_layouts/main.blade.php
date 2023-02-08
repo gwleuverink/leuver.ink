@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="{{ $page->language ?? 'en' }}">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,7 +24,13 @@
     <!-- Script stack -->
     @stack('scripts')
 </head>
-<body x-init="$el.classList.remove('opacity-0')" class="font-sans antialiased text-gray-900 transition-opacity duration-300 opacity-0">
+
+<body
+    x-data="{show: false}"
+    x-show="show"
+    x-init="$nextTick(() => show = true)"
+    x-transition.opacity.0.duration.400ms
+    class="font-sans antialiased text-gray-900">
 
     {{-- WRAPPER --}}
     <div class="max-w-xl mx-auto md:max-w-5xl">
@@ -36,8 +43,7 @@
             <div x-data="{ open: false }"
                 aria-modal="true"
                 role="mobile-nav"
-                class="relative flex flex-col md:hidden"
-            >
+                class="relative flex flex-col md:hidden">
 
                 <button x-on:click="open = !open" class="absolute right-0 p-2 pb-1 font-bold tracking-wider text-white uppercase bg-gray-700 border-gray-900 -top-12 border-b-3">
                     Menu
@@ -47,8 +53,7 @@
                     x-show="open"
                     x-transition
                     x-trap.inert.noscroll="open"
-                    class="flex flex-col justify-center min-h-screen px-8 pt-10 pb-2 -mt-20 text-3xl text-center text-gray-00"
-                >
+                    class="flex flex-col justify-center min-h-screen px-8 pt-10 pb-2 -mt-20 text-3xl text-center text-gray-00">
 
                     @include('_partials.nav-links')
 
@@ -73,7 +78,7 @@
             </aside>
             {{-- END DESKTOP NAV --}}
 
-            <main  role="main" class="flex-1 min-w-0 px-4 md:px-12 lg:pl-24 lg:pr-16">
+            <main role="main" class="flex-1 min-w-0 px-4 md:px-12 lg:pl-24 lg:pr-16">
 
                 @yield('content')
 
@@ -89,4 +94,5 @@
     @include('_partials.svg-definitions')
 
 </body>
+
 </html>

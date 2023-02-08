@@ -1,21 +1,40 @@
-<div x-data="{ animated: $persist(false).using(sessionStorage).as('logo-animated') }"
+<a href="/"
     x-init="$nextTick(() => animated = true)"
-    class="flex space-x-4 overflow-hidden"
-    role="banner"
->
-    <span class="w-16 min-h-[64px]">
-        <x-svg.retro-sun x-show="animated"
-            x-transition:enter="transition ease-out duration-700"
-            x-transition:enter-start="opacity-0 transform-gpu scale-90 translate-y-16"
-            x-transition:enter-end="opacity-100 transform-gpu scale-100 translate-y-0"
-            x-transition:leave="transition ease-in duration-700"
-            x-transition:leave-start="opacity-100 transform-gpu scale-100 translate-y-0"
-            x-transition:leave-end="opacity-0 transform-gpu scale-90 translate-y-16"
-            class="w-full" />
-    </span>
+    x-data="{
+        animated: $persist(false).using(sessionStorage).as('logo-animated'),
+        revert: function (callback) {
+            this.$event.preventDefault()
+            this.animated = false
+            this.$nextTick(
+                setTimeout(() => callback(), 260)
+            )
+        }
+    }"
+    x-on:click.prevent="() => revert(() => window.location = '/')"
+    x-on:keydown.window.meta.r="() => revert(() => location.reload())"
+    class="inline-block -skew-x-12"
+    role="banner">
 
-    <div>
-        <h1 x-show="animated" x-transition.delay.450ms class="text-3xl font-semibold text-purple-800">Hi, I’m Willem</h1>
-        <h2 x-show="animated" x-transition.delay.600ms class="text-xl">and i make things</h2>
+    <div
+        x-show="animated"
+        x-transition.duration.300ms.delay.100ms.scale.160.opacity.0
+
+        class="inline-block transform-gpu bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+
+        <h1 class="mx-3 text-3xl italic font-semibold text-white skew-x-12">
+            <x-typing-animation text="Hi, I'm Willem" x-model="animated" />
+        </h1>
+
     </div>
-</div>
+
+
+
+
+    {{-- <div
+        x-show="animated"
+        x-transition:enter.delay.1600ms
+        x-transition:leave.delay.0ms>
+        and I make things
+    </div> --}}
+
+</a>
