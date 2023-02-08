@@ -2,6 +2,7 @@
     "require": {
         "tightenco/jigsaw": "^1.6",
         "ramsey/uuid": "^4.7",
-        "torchlight/torchlight-jigsaw": "^0.3"
+        "torchlight/torchlight-jigsaw": "^0.3",
+        "laravel/pint": "^1.4"
     }
 }
