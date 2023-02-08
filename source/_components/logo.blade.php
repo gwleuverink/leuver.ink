@@ -12,7 +12,7 @@
     }"
     x-on:click.prevent="() => revert(() => window.location = '/')"
     x-on:keydown.window.meta.r="() => revert(() => location.reload())"
-    class="inline-block -skew-x-12"
+    class="inline-block -skew-x-12 select-none"
     role="banner">
 
     <div
@@ -21,20 +21,19 @@
 
         class="inline-block transform-gpu bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
 
-        <h1 class="mx-3 text-3xl italic font-semibold text-white skew-x-12">
+        <h1 class="mx-3 my-0.5 text-3xl italic font-semibold text-white skew-x-12">
             <x-typing-animation text="Hi, I'm Willem" x-model="animated" />
         </h1>
 
     </div>
 
 
-
-
-    {{-- <div
+    <div
         x-show="animated"
-        x-transition:enter.delay.1600ms
-        x-transition:leave.delay.0ms>
+        x-transition:enter.delay.1700ms
+        x-transition:leave.delay.0ms
+        class="ml-4 italic font-bold text-pink-600 skew-x-12">
         and I make things
-    </div> --}}
+    </div>
 
 </a>
