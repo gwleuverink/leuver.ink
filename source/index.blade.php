@@ -11,15 +11,11 @@ pagination:
 <div class="prose prose-xl">
 
     <p role="heading">
-        I'm <a href="https://twitter.com/gwleuverink" target="_blank">Willem</a>, I work as a full-stack developer <a href="https://mediacode.nl" target="_blank">@mediacode</a>. Currently enamoured with <a href="https://laravel-livewire.com" target="_blank">Livewire</a>, <a href="https://www.alpinejs.dev" target="_blank">AlpineJS</a> & <a href="https://tailwindcss.com" target="_blank">Tailwind</a>. And let me be honest for a second, this thing has grown way past affection ❤️
+        I'm <a href="https://twitter.com/gwleuverink" target="_blank">Willem</a>, I work as a full-stack web developer <a href="https://mediacode.nl" target="_blank">@mediacode</a>. Currently enamoured with <a href="https://laravel-livewire.com" target="_blank">Livewire</a>, <a href="https://www.alpinejs.dev" target="_blank">AlpineJS</a> & <a href="https://tailwindcss.com" target="_blank">Tailwind</a>. And let me be honest for a second, this thing has grown way past affection <x-svg.heart class="inline w-6 h-6 ml-1" />
     </p>
 
-    {{-- <p>
-        I've been utilizing these technologies for the past year and the results have been outstanding. I've become more productive and efficient in my development work, thanks to the seamless and lightning-fast interactions these technologies enable.
-    </p> --}}
-
     <p>
-        This blog is not just limited to my work as a developer. I have a diverse range of interests and I plan to venture out and share my thoughts and experiences. Whether it's building a bookshelf from scratch or exploring the great outdoors, I believe that we can all learn and grow from each other's experiences.
+        Though I am a developer by trade, this blog is not just limited to my work as a developer. I have a diverse range of interests and I plan to venture out and share my thoughts and experiences. Whether it's building a bookshelf from scratch or exploring the great outdoors, I believe that we can all learn and grow from each other's experiences.
     </p>
 
     <p>
@@ -45,4 +41,5 @@ pagination:
 @endforeach
 
 <x-time-tracker-banner class="mt-12" />
+
 @endsection
