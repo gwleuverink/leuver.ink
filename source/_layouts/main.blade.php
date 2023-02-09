@@ -35,7 +35,7 @@
     {{-- WRAPPER --}}
     <div class="max-w-xl mx-auto md:max-w-5xl">
 
-        <header class="px-4 mt-8 mb-8 leading-tight bg-white md:mt-12 sm:mb-12 md:mb-16 md:px-8">
+        <header class="px-4 mt-8 mb-8 leading-tight md:mt-12 sm:mb-12 md:mb-16 md:px-8">
 
             <x-logo />
 
@@ -45,7 +45,7 @@
                 role="mobile-nav"
                 class="relative flex flex-col md:hidden">
 
-                <button x-on:click="open = !open" class="absolute right-0 p-2 pb-1 font-bold tracking-wider text-white uppercase bg-gray-700 border-gray-900 -top-12 border-b-3">
+                <button x-on:click="open = !open" class="absolute right-0 p-2 pb-1 font-bold tracking-wider text-white uppercase bg-gray-700 border-gray-900 -top-14 border-b-3">
                     Menu
                 </button>
 
