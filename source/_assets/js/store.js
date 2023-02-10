@@ -5,28 +5,42 @@ document.addEventListener('alpine:init', () => {
         enabled: null,
 
         init() {
-            this.enabled = this.determineInitialDarkModeState()
+            this.set(this.determineInitialDarkModeState())
 
             // Detect dynamic OS color scheme change
             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-                this.enabled = e.matches
+                this.set(e.matches)
             });
+        },
+
+        set(value) {
+            this.enabled = value
+
+            // When toggling manually we store the preference in localStorage,
+            // but only if the value is different from the OS color scheme
+            // so it falls back to the OS default after a refresh
+            if (this.operatingSystemInDarkMode() !== this.enabled) {
+                localStorage.setItem('dark-mode', this.enabled)
+            } else {
+                localStorage.removeItem('dark-mode')
+            }
+        },
+
+        toggle() {
+            this.set(!this.enabled)
         },
 
         determineInitialDarkModeState: function () {
             if (localStorage.getItem('dark-mode') === null) {
                 // No preference set. Determine from OS color scheme
-                return window.matchMedia('(prefers-color-scheme: dark)').matches
+                return this.operatingSystemInDarkMode()
             }
 
             return localStorage.getItem('dark-mode') === 'true'
         },
 
-        toggle() {
-            this.enabled = !this.enabled
-
-            // When toggling manually we store the preference in localStorage
-            localStorage.setItem('dark-mode', this.enabled)
-        },
+        operatingSystemInDarkMode() {
+            return window.matchMedia('(prefers-color-scheme: dark)').matches
+        }
     })
 })
