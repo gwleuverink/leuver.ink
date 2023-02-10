@@ -2,27 +2,31 @@ document.addEventListener('alpine:init', () => {
 
     // Darkmode preference store
     Alpine.store('darkMode', {
-        enabled: window.localStorage.getItem('dark-mode'),
+        enabled: null,
 
         init() {
-            // Default to system color scheme
-            if (this.enabled === null) {
-                this.set(window.matchMedia('(prefers-color-scheme: dark)').matches)
-            }
+            this.enabled = this.determineInitialDarkModeState()
 
             // Detect dynamic OS color scheme change
             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-                this.set(e.matches)
+                this.enabled = e.matches
             });
         },
 
-        set(value) {
-            this.enabled = value
-            window.localStorage.setItem('dark-mode', value)
+        determineInitialDarkModeState: function () {
+            if (localStorage.getItem('dark-mode') === null) {
+                // No preference set. Determine from OS color scheme
+                return window.matchMedia('(prefers-color-scheme: dark)').matches
+            }
+
+            return localStorage.getItem('dark-mode') === 'true'
         },
 
         toggle() {
-            this.set(!this.enabled)
+            this.enabled = !this.enabled
+
+            // When toggling manually we store the preference in localStorage
+            localStorage.setItem('dark-mode', this.enabled)
         },
     })
 })

@@ -2,7 +2,7 @@
 
 <html
     x-data
-    x-bind:class="$store.darkMode.enabled ? 'dark' : null"
+    x-effect="$el.classList.toggle('dark', $store.darkMode.enabled)"
     lang="{{ $page->language ?? 'en' }}"
 >
 
