@@ -1,6 +1,8 @@
-<div {{ $attributes->class('flex p-6 my-10 space-x-6 select-none rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500') }}>
+<div {{ $attributes->class('flex flex-col sm:flex-row p-6 my-10 space-x-6 select-none rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500') }}>
 
-    <img class="h-28 drop-shadow-xl" src="/assets/images/clickup-time-tracker-logo.png" alt="Time Tracker logo">
+    <div class="flex justify-center">
+        <img class="h-28 drop-shadow-xl" src="/assets/images/clickup-time-tracker-logo.png" alt="Time Tracker logo">
+    </div>
 
     <div>
         <h3 class="text-xl font-semibold text-white">Time Tracker for ClickUp</h3>
