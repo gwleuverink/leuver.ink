@@ -10,8 +10,12 @@
             )
         }
     }"
-    x-on:click.prevent="() => revert(() => window.location = '/')"
-    x-on:keydown.window.meta.r="() => revert(() => location.reload())"
+    x-on:keydown.window.meta.r="() => revert(
+        () => location.reload()
+    )"
+    x-on:click="() => revert(
+        () => window.location = '/'
+    )"
     class="inline-block -skew-x-12 select-none min-h-[60px] transition transform-gpu"
     role="banner">
 
