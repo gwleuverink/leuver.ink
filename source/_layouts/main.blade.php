@@ -19,37 +19,8 @@
     <link href="{{ mix('css/app.css', 'assets/build') }}" rel="stylesheet">
     <link href="{{ mix('css/font.css', 'assets/build') }}" rel="preload stylesheet" as="style" crossorigin="anonymous" />
 
-    <!-- Alpine JS -->
-    <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-    <!-- Darkmode preference store -->
-    <script>
-        document.addEventListener('alpine:init', () => {
-            Alpine.store('darkMode', {
-                enabled: localStorage.getItem('dark-mode'),
-
-                init() {
-                    // Default to system color scheme
-                    if(this.enabled === null) {
-                        this.enabled = window.matchMedia('(prefers-color-scheme: dark)').matches
-                    }
-
-                    // Detect dynamic OS color scheme change
-                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-                        this.enabled = e.matches;
-                    });
-                },
-
-                toggle() {
-                    this.enabled = ! this.enabled
-                    localStorage.setItem('dark-mode', this.enabled)
-                }
-            })
-        })
-    </script>
+    <!-- JS Bundle -->
+    <script defer src="{{ mix('js/app.js', 'assets/build') }}"></script>
 
     <!-- Script stack -->
     @stack('scripts')
