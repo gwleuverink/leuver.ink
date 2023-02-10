@@ -4,7 +4,10 @@
         animated: $persist(false).using(sessionStorage).as('logo-animated'),
         revert: function (callback) {
             this.$event.preventDefault()
+            this.$event.stopPropagation()
+
             this.animated = false
+
             this.$nextTick(
                 setTimeout(() => callback(), 260)
             )
