@@ -26,12 +26,7 @@
     @stack('scripts')
 </head>
 
-<body
-    x-data="{show: false}"
-    x-show="show"
-    x-init="$nextTick(() => show = true)"
-    x-transition.opacity.0.duration.400ms
-    class="font-sans antialiased text-gray-900 transition-colors bg-white dark:text-gray-100 dark:bg-slate-900">
+<body class="font-sans antialiased text-gray-900 transition-colors bg-white dark:text-gray-100 dark:bg-slate-900">
 
     {{-- WRAPPER --}}
     <div class="max-w-xl mx-auto md:max-w-5xl">
@@ -79,7 +74,12 @@
             </aside>
             {{-- END DESKTOP NAV --}}
 
-            <main role="main" class="flex-1 min-w-0 px-4 md:px-12 lg:pl-24 lg:pr-16">
+            <main role="main"
+                x-data="{ show: false }"
+                x-show="show"
+                x-init="() => $nextTick(() => show = true)"
+                x-transition.opacity.0.duration.400ms
+                class="flex-1 min-w-0 px-4 md:px-12 lg:pl-24 lg:pr-16">
 
                 @yield('content')
 
