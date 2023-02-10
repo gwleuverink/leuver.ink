@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 
-<html lang="{{ $page->language ?? 'en' }}">
+<html
+    x-data
+    x-bind:class="{
+        'dark': $store.darkMode.enabled
+    }"
+    lang="{{ $page->language ?? 'en' }}"
+>
 
 <head>
     <meta charset="UTF-8" />
@@ -20,6 +26,23 @@
     <script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Darkmode preference store -->
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.store('darkMode', {
+                enabled: false,
+
+                init() {
+                    this.enabled = window.matchMedia('(prefers-color-scheme: dark)').matches
+                },
+
+                toggle() {
+                    this.enabled = ! this.enabled
+                }
+            })
+        })
+    </script>
 
     <!-- Script stack -->
     @stack('scripts')
