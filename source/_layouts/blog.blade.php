@@ -11,7 +11,7 @@
         {{ $page->title }}
     </h2>
 
-    <p class="text-lg text-gray-700">
+    <p class="text-lg text-gray-700 dark:text-slate-300">
         <time datetime="{{ date('Y-m-d\TH:i:s') }}">{{ date('F j, Y', $page->date) }}</time> – {{ $page->readTime }}
     </p>
 
