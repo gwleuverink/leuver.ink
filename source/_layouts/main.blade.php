@@ -2,9 +2,7 @@
 
 <html
     x-data
-    x-bind:class="{
-        'dark': $store.darkMode.enabled
-    }"
+    x-bind:class="$store.darkMode.enabled ? 'dark' : null"
     lang="{{ $page->language ?? 'en' }}"
 >
 
@@ -31,14 +29,23 @@
     <script>
         document.addEventListener('alpine:init', () => {
             Alpine.store('darkMode', {
-                enabled: false,
+                enabled: localStorage.getItem('dark-mode'),
 
                 init() {
-                    this.enabled = window.matchMedia('(prefers-color-scheme: dark)').matches
+                    // Default to system color scheme
+                    if(this.enabled === null) {
+                        this.enabled = window.matchMedia('(prefers-color-scheme: dark)').matches
+                    }
+
+                    // Detect dynamic OS color scheme change
+                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                        this.enabled = e.matches;
+                    });
                 },
 
                 toggle() {
                     this.enabled = ! this.enabled
+                    localStorage.setItem('dark-mode', this.enabled)
                 }
             })
         })
