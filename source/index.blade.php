@@ -25,7 +25,7 @@ pagination:
 </div>
 
 {{-- START | RSS BANNER --}}
-<div class="relative mt-10 mb-12 prose prose-xl bg-zinc-100">
+<div class="relative mt-10 mb-12 prose prose-xl bg-zinc-100 dark:bg-slate-800 dark:text-slate-300">
     <div class="px-6 py-6">
         <p>Below you'll find my latest writings. Check <a href="/blog">here</a> for the full archive, or subscribe to the <a href="/feed.atom">RSS feed</a></p>
     </div>

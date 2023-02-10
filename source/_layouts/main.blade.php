@@ -53,7 +53,7 @@
     x-show="show"
     x-init="$nextTick(() => show = true)"
     x-transition.opacity.0.duration.400ms
-    class="font-sans antialiased text-gray-900">
+    class="font-sans antialiased text-gray-900 transition-colors bg-white dark:text-gray-100 dark:bg-slate-900">
 
     {{-- WRAPPER --}}
     <div class="max-w-xl mx-auto md:max-w-5xl">
@@ -92,7 +92,7 @@
             {{-- DESKTOP NAV --}}
             <aside class="hidden w-1/4 leading-loose text-right md:block lg:w-1/5">
 
-                <nav class="sticky flex flex-col px-8 py-2 mb-16 text-gray-700 border-r border-gray-200 top-4">
+                <nav class="sticky flex flex-col px-8 py-2 mb-16 text-gray-700 border-r border-gray-200 dark:text-slate-300 top-4">
 
                     @include('_partials.nav-links')
 

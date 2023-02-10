@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+    darkMode: 'class',
     content: require('fast-glob').sync([
         'source/**/*.blade.php',
         'source/**/*.md',
@@ -30,5 +31,6 @@ module.exports = {
     },
     plugins: [
         require('@tailwindcss/typography'),
+        require('@tailwindcss/forms'),
     ],
 }

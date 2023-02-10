@@ -7,7 +7,7 @@ title: Time Tracker for ClickUp
 @section('content')
 
     <div class="prose prose-xl">
-        <h2 class="mb-1 text-2xl font-bold leading-tight text-gray-700 md:text-3xl">ClickUp Time Tracker</h2>
+        <h2 class="mb-1 text-2xl font-bold leading-tight text-gray-700 md:text-3xl dark:text-slate-300">ClickUp Time Tracker</h2>
 
         <p>
             At the office we make use of ClickUp quite heavily. It's a pretty versatile productivity platform, but sadly not without it's quirks.

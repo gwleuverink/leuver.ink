@@ -8,6 +8,19 @@
     @apply bg-cyan-100;
 }
 
+/* Dark mode overrides */
+.prose {
+    @apply dark:text-slate-400;
+}
+
+.prose a {
+    @apply dark:text-slate-200;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5 {
+    @apply dark:text-slate-300;
+}
+
 .prose-xl pre {
     @apply px-0 -mx-4 sm:mx-auto;
 }

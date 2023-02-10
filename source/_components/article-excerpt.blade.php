@@ -14,11 +14,11 @@
     <header class="mb-6">
         <a href="{{ $post->getUrl() }}">
 
-            <h2 class="max-w-lg mb-1 text-2xl font-semibold leading-tight text-gray-700 md:text-3xl">
+            <h2 class="max-w-lg mb-1 text-2xl font-semibold leading-tight text-gray-700 dark:text-slate-300 md:text-3xl">
                 {{ $post->title }}
             </h2>
 
-            <p class="text-lg text-gray-700">
+            <p class="text-lg text-gray-700 dark:text-slate-300">
                 <time datetime="{{ date('Y-m-d\TH:i:s') }}">{{ date('F j, Y', $post->date) }}</time> – {{ $post->readTime }}
             </p>
 

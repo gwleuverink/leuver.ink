@@ -7,7 +7,7 @@
 
 <header class="mb-6">
 
-    <h2 class="max-w-lg mb-1 text-2xl font-bold leading-tight text-gray-700 md:text-3xl">
+    <h2 class="max-w-lg mb-1 text-2xl font-bold leading-tight text-gray-700 md:text-3xl dark:text-slate-300">
         {{ $page->title }}
     </h2>
 
