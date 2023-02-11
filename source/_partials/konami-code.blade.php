@@ -2,7 +2,8 @@
 Flashes an isnspiring mesage after the konami code is entered
 --}}
 
-<div x-show="open"
+<div x-title="konami-code"
+    x-show="open"
     x-transition
     x-trap.inert.noscroll="open"
     x-init="
@@ -59,10 +60,10 @@ Flashes an isnspiring mesage after the konami code is entered
             ])
         }}`),
     }"
-    class="fixed inset-0 flex items-center justify-center bg-white"
-    role="konami-code"
+    class="fixed inset-0 flex items-center justify-center bg-white dark:bg-slate-900"
+    role="alertdialog"
 >
-    <div class="text-gray-600 prose prose-2xl">
+    <div class="prose prose-2xl">
         <blockquote x-text="quote"></blockquote>
     </div>
 </div>
