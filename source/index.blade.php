@@ -1,4 +1,5 @@
 ---
+title: Willem's blog
 pagination:
   collection: posts
   perPage: 5

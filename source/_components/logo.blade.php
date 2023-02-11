@@ -20,7 +20,8 @@
         () => window.location = '/'
     )"
     class="inline-block -skew-x-12 select-none min-h-[60px] transition transform-gpu"
-    role="banner">
+    role="banner"
+    aria-label="Back to home">
 
     <div
         x-show="animated"

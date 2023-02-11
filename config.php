@@ -8,6 +8,7 @@ return [
     'title' => 'Project X',
     'description' => 'Website description.',
     'siteAuthor' => 'Willem Leuverink',
+    'siteName' => 'Willem\'s Blog',
 
     'collections' => [
         'posts' => [

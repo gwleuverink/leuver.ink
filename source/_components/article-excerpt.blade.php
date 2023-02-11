@@ -14,7 +14,7 @@
     <header class="mb-6">
         <a href="{{ $post->getUrl() }}">
 
-            <h2 class="max-w-lg mb-1 text-2xl font-semibold leading-tight text-gray-700 dark:text-slate-300 md:text-3xl">
+            <h2 class="mb-1 text-2xl font-semibold leading-tight text-gray-700 dark:text-slate-300 md:text-3xl">
                 {{ $post->title }}
             </h2>
 
@@ -33,13 +33,13 @@
         </a>
     </header>
 
-    <div class="leading-relaxed prose prose-xl">
+    <div class="leading-relaxed prose prose-xl prose-pre:bg-transparent">
 
         <p>
             {{ $post->getExcerpt() }}
         </p>
 
-        <a href="{{ $post->getUrl() }}" class="mt-6">
+        <a href="{{ $post->getUrl() }}" class="mt-6" aria-label="Read the full article">
             Read more
         </a>
 
