@@ -5,7 +5,11 @@
 
 /* Tailwind components */
 ::selection {
-    @apply bg-cyan-100;
+    @apply bg-purple-300;
+}
+
+.dark ::selection {
+    @apply bg-slate-700;
 }
 
 /* Dark mode overrides */
