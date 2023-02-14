@@ -50,7 +50,7 @@
                     x-show="open"
                     x-transition
                     x-trap.inert.noscroll="open"
-                    class="flex flex-col justify-center min-h-screen px-8 pt-10 pb-2 -mt-20 text-3xl text-center text-gray-00">
+                    class="flex flex-col justify-center min-h-screen px-8 pt-10 pb-2 -mt-20 text-3xl text-center select-none">
 
                     @include('_partials.nav-links')
 
@@ -66,7 +66,7 @@
             {{-- DESKTOP NAV --}}
             <aside class="hidden w-1/4 leading-loose text-right md:block lg:w-1/5">
 
-                <nav class="sticky flex flex-col px-8 py-2 mb-16 text-gray-700 border-r border-gray-200 dark:text-slate-300 top-4">
+                <nav class="sticky flex flex-col px-8 py-2 mb-16 text-gray-700 border-r border-gray-200 select-none dark:text-slate-300 top-4">
 
                     @include('_partials.nav-links')
 
