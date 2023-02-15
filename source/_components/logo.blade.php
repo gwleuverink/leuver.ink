@@ -1,4 +1,5 @@
 <a href="/"
+    x-title="logo"
     x-init="$nextTick(() => animated = true)"
     x-data="{
         animated: $persist(false).using(sessionStorage).as('logo-animated'),
