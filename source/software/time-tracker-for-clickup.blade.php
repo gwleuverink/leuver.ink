@@ -45,7 +45,7 @@ title: Time Tracker for ClickUp
             All changes you make are synced with ClickUp in real time!
         </p>
 
-        <img src="/assets/images/clickup-time-tracker-screenshot.png" alt="">
+        <img src="/assets/images/clickup-time-tracker-screenshot.png" alt="Time Tracker for ClickUp Screenshot" class="scale-110">
 
         <h4>What's included</h4>
 
