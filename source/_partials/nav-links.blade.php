@@ -1,4 +1,13 @@
-<a href="{{ $page->baseUrl }}" class="{{ $page->selected('/') }}">
+<a
+    x-on:click.prevent="
+        // Click on the logo instead (so animation triggers)
+        Array.from(document.getElementsByClassName('logo')).every(el => {
+            el.click()
+            return false
+        })
+    "
+    href="{{ $page->baseUrl }}"
+    class="{{ $page->selected('/') }}">
     Home
 </a>
 

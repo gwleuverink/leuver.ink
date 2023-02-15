@@ -19,7 +19,7 @@
     x-on:click="() => revert(
         () => window.location = '/'
     )"
-    class="inline-block -skew-x-12 select-none min-h-[60px] transition transform-gpu"
+    class="logo inline-block -skew-x-12 select-none min-h-[60px] transition transform-gpu"
     role="banner"
     aria-label="Back to home">
 
