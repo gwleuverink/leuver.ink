@@ -19,9 +19,11 @@ title: About
         </div>
     </div>
 
+    {{--
     <p>
         If you've got this far, I'd just like to say.. Hi mum, I know it's you. I've got my own website. Next time you ask me what it is I do, I'll just refer you back to this page.
     </p>
+    --}}
 
     <p>
         I am a engineer by trade. Creative problem solving is what I do. Wherether that'd be by writing code or finding solutions that help businesses improve their efficiency.
@@ -87,9 +89,25 @@ title: About
 
         </div>
 
-        <x-input.submit ::disabled="state.success || state.submitting">
-            submit
-        </x-input.submit>
+        <div class="flex items-center justify-end my-8 space-x-6">
+
+            <span x-show="state.success" x-transition.opacity.scale.origin.right class="text-base text-slate-600 dark:text-slate-300">
+                Message sent!
+            </span>
+
+            <span x-show="state.exception" x-transition.opacity.scale.origin.right class="text-base text-red-600 dark:text-red-400">
+                Something went wrong. Please check the fields and retry
+            </span>
+
+            <span x-show="state.submitting" x-transition.opacity.scale.origin.right class="text-base text-slate-600 dark:text-slate-300">
+                Working on it...
+            </span>
+
+            <x-input.submit ::disabled="state.success || state.submitting">
+                submit
+            </x-input.submit>
+
+        </div>
 
     </x-input.form>
 

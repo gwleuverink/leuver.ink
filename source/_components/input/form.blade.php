@@ -16,7 +16,7 @@
                 body: this.formData,
             })
             .then(() => this.handleSuccess())
-            .catch(() => this.handleException())
+            .catch(err => this.handleException(err))
         },
 
         handleSuccess() {
@@ -25,7 +25,8 @@
             this.state.submitting = false
         },
 
-        handleException() {
+        handleException(err) {
+            console.warning('Form submission failed:', err)
             this.state.exception = true
             this.state.success = false
             this.state.submitting = false
