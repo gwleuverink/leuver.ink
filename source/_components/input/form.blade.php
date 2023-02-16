@@ -51,8 +51,4 @@
 
     {{ $slot }}
 
-    <pre x-html="JSON.stringify(state)">
-
-    </pre>
-
 </form>
