@@ -39,6 +39,11 @@ title: About
     <x-separator />
 
     <p>
+        Having said all that, professional endeavours and interests are not what makes a man. Not going to bore you here. Instead, drop me a line. I'm available for freelance project work, consulting, mentoring & pair sessions.
+    </p>
+
+    {{--
+    <p>
         Having said all that, professional endeavours and interests are not what makes a man. Let's give you a short summary of some other things I enjoy, hopefully without boring you to a slumber.
     </p>
 
@@ -53,6 +58,40 @@ title: About
     <p>
         When not busy taking care of our newborn I love going for a hike or a bike ride in the dunes or go for a quick surf in the sunset. I thoroughly enjoy getting my hands dirty wile pruning the garden or working on yet another DIY project.
     </p>
+     --}}
+
+
+     <x-input.form
+        action="https://formkeep.com/f/c5d5525650bd"
+        accept-charset="UTF-8"
+        enctype="multipart/form-data"
+        method="POST"
+        class="my-10"
+     >
+
+        <input type="hidden" x-model="form.subscribe_c5d5525650bd_41440" name="subscribe_c5d5525650bd_41440" value="">
+
+        <div class="grid grid-cols-2 mt-6 gap-y-6 gap-x-4">
+
+            <x-input.group label="Where can I reach you?" class="col-span-2 sm:col-span-1">
+                <x-input.text x-model="form.email" name="email" type="email" autocomplete="email" required />
+            </x-input.group>
+
+            <x-input.group label="What's your name" class="col-span-2 sm:col-span-1">
+                <x-input.text x-model="form.name" name="name" autocomplete="given-name" required />
+            </x-input.group>
+
+            <x-input.group label="Drop me a line!" class="col-span-2">
+                <x-input.textarea x-model="form.message" name="message" required />
+            </x-input.group>
+
+        </div>
+
+        <x-input.submit ::disabled="state.success || state.submitting">
+            submit
+        </x-input.submit>
+
+    </x-input.form>
 
 </div>
 
