@@ -34,7 +34,7 @@
 
         <header class="px-4 mt-8 mb-8 leading-tight md:mt-12 sm:mb-12 md:mb-16 md:px-8">
 
-            <x-logo />
+            <x-logo class="translate-x-0 lg:-translate-x-10 xl:-translate-x-24" />
 
             {{-- MOBILE NAV --}}
             <div x-data="{ open: false }"
@@ -61,7 +61,7 @@
 
         </header>
 
-        <div class="pb-12 text-xl md:flex">
+        <div class="pb-12 text-xl translate-x-0 md:flex md:-translate-x-14 lg:-translate-x-20 xl:-translate-x-24">
 
             {{-- DESKTOP NAV --}}
             <aside class="hidden w-1/4 leading-loose text-right md:block lg:w-1/5">

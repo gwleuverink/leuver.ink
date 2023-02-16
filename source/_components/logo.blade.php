@@ -20,7 +20,7 @@
     x-on:click="() => revert(
         () => window.location = '/'
     )"
-    class="logo inline-block -skew-x-12 select-none min-h-[60px] transition transform-gpu"
+    {{ $attributes->class('logo inline-block -skew-x-12 select-none min-h-[60px] transition transform-gpu') }}
     role="banner"
     aria-label="Back to home">
 
