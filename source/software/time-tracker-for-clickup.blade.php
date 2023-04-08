@@ -14,15 +14,11 @@ title: Time Tracker for ClickUp
         </p>
 
         <p>
-            ClickUp still has a lot of issues, especially when you're working with giant project boards with 500+ tasks. Performance is at issue as well, at peak hours the web app becomes so unresponsive it completely takes me out of my flow state.
+            The built-in time tracking capabilities are alright okay. But actually working it is very tedious and requires you to keep track of things across multiple tasks, boards or even spaces.
         </p>
 
         <p>
-            It's not only the performance that bugs me when tracking time. It's the built in time tracking capabilities of ClickUp itself too. They provide a manual way to log time, and also a timer you can toggle when you start your work.
-        </p>
-
-        <p>
-            Both approaches don't work well for me. It's easy to forget and leave your timer running, completely mucking up your historical tracking data.
+            When you're working with giant project boards with 500+ tasks things slow down quick. At peak hours the web app becomes somewhat unresponsive and retroactively logging hours becomes pretty much impossible.
         </p>
 
         <p>
@@ -54,6 +50,7 @@ title: Time Tracker for ClickUp
             <li>Orderly Week calendar view (easily spot gaps)</li>
             <li>Intuitive drag & drop UI</li>
             <li>Convenient keyboard shortcuts</li>
+            <li>A dedicated management view to get a live view of time tracking of any user (workspace admins only)</li>
             <li>Lower your cortisol levels at the end of the workday by 30% (results may vary)</li>
         </ul>
 
