@@ -1,7 +1,7 @@
 
 @if($paginator->totalPages > 1)
 
-    <nav class="flex items-center justify-between px-4 mt-16 text-xl border-t border-slate-300 sm:px-0">
+    <nav class="flex items-center justify-between px-4 mt-16 text-xl border-t border-slate-300 dark:border-slate-800 sm:px-0">
         <div class="flex flex-1 w-0 -mt-px">
 
             @if ($previous = $paginator->previous)
@@ -24,7 +24,7 @@
                 @php
                     $classes = $paginator->currentPage == $pageNumber // current page
                         ? 'border-pink-700 text-pink-700'
-                        : 'border-transparent text-slate-400 transition-colors duration-200 hover:text-slate-500 hover:border-slate-300 '
+                        : 'border-transparent text-slate-400 dark:text-slate-600 transition-colors duration-200 dark:hover:text-slate-500 hover:text-slate-500 hover:border-slate-300 dark:hover:border-slate-600'
                 @endphp
                 <a
                     href="{{ $page->baseUrl }}{{ $path }}"
