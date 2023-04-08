@@ -2,7 +2,7 @@
 title: Willem's blog
 pagination:
   collection: posts
-  perPage: 5
+  perPage: 3
 ---
 
 @extends('_layouts.main')
@@ -26,13 +26,9 @@ pagination:
 </div>
 
 {{-- START | RSS BANNER --}}
-<div class="relative mt-10 mb-12 prose prose-xl duration-150 bg-zinc-100 dark:bg-slate-800 dark:text-slate-300">
-    <div class="px-6 py-6">
-        <p>Below you'll find my latest writings. Check <a href="/blog">here</a> for the full archive, or subscribe to the <a href="/feed.atom">RSS feed</a></p>
-    </div>
-
-    <div class="absolute bottom-0 w-full h-2 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"></div>
-</div>
+<x-highlight-banner>
+    <p>Below you'll find my latest writings. Check <a href="/blog">here</a> for the full archive, or subscribe to the <a href="/feed.atom">RSS feed</a></p>
+</x-highlight-banner>
 {{-- END | RSS BANNER --}}
 
 @foreach ($pagination->items as $post)
@@ -40,6 +36,12 @@ pagination:
 <x-article-excerpt :post="$post" :divider="! $loop->last" />
 
 @endforeach
+
+<div class="flex justify-center my-8">
+    <a href="/blog" class="flex items-center px-4 py-2 mt-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        Check the full archive of articles
+    </a>
+</div>
 
 <x-time-tracker-banner class="mt-12" />
 
