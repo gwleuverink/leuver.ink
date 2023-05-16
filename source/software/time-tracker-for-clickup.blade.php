@@ -10,11 +10,11 @@ title: Time Tracker for ClickUp
         <h2 class="mb-1 text-2xl font-bold leading-tight text-gray-700 md:text-3xl dark:text-slate-300">ClickUp Time Tracker</h2>
 
         <p>
-            At the office we make use of ClickUp quite heavily. It's a pretty versatile productivity platform, but sadly not without it's quirks.
+            At the office we make use of ClickUp quite heavily. It's a pretty versatile productivity platform, but not without it's quirks.
         </p>
 
         <p>
-            The built-in time tracking capabilities are alright okay. But actually working it is very tedious and requires you to keep track of things across multiple tasks, boards or even spaces.
+            The built-in time tracking capabilities are okay. But actually working it is very tedious and requires you to keep track of things across multiple tasks, boards or even spaces.
         </p>
 
         <p>
@@ -22,7 +22,7 @@ title: Time Tracker for ClickUp
         </p>
 
         <p>
-            Tracking time should be as frictionless and orderly as possible. This is why I decided to create a tool to solve this endless struggle. Please welcome; the <b>ClickUp Time Tracker</b>.
+            Tracking time should be as frictionless and orderly as possible. This is why've created a small tool to streamline my day. Drummroll please; the <b>ClickUp Time Tracker</b>.
         </p>
     </div>
 

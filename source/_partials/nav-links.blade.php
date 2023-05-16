@@ -23,9 +23,6 @@
     About
 </a>
 
-<a href="{{ $page->baseUrl }}using" class="{{ $page->selected('using') }}">
-    Using
-</a>
 
 <div class="mt-8">
     <x-darkmode-toggle />
