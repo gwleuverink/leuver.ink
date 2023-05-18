@@ -29,6 +29,7 @@ title: About
         I am a engineer by trade. Creative problem solving is what I do. Wherether that'd be by writing code or finding solutions that help businesses improve their efficiency.
     </p>
 
+    {{--
     <p>
         A good program has much in common with written prose. It it is an expression of creativity. Clear in how it communicates it's intent and iterated over many times untill it is as perfect as can be.
     </p>
@@ -37,30 +38,13 @@ title: About
         A hallmark of good software in my opinion is not only that is well designed, written with the right abstractions & rigourosly tested. But it also has a certain astetic only an seasoned programmer might appreciate.
         In that regard, I consider programming a highly creative endeavor. One that I pull a lot of satisfaction from.
     </p>
+    --}}
 
     <x-separator />
 
     <p>
-        Having said all that, professional endeavours and interests are not what makes a man. Not going to bore you here. Instead, drop me a line. I'm available for freelance project work, consulting, mentoring & pair sessions.
+        Feel free to drop me a line! I'm available for your regular shop talk, freelance project work, consulting & pair sessions.
     </p>
-
-    {{--
-    <p>
-        Having said all that, professional endeavours and interests are not what makes a man. Let's give you a short summary of some other things I enjoy, hopefully without boring you to a slumber.
-    </p>
-
-    <p>
-        I'm a proud husband and father to a (at the time of writing) newborn daughter. We recently moved house from the city to a quaint village, right next to national park Zuid Kennemerland.
-    </p>
-
-    <p>
-        Honestly, I was reluctand moving from the city at first but now can never go back. Living close to nature gives me a peace of mind I did not realize I was missing before.
-    </p>
-
-    <p>
-        When not busy taking care of our newborn I love going for a hike or a bike ride in the dunes or go for a quick surf in the sunset. I thoroughly enjoy getting my hands dirty wile pruning the garden or working on yet another DIY project.
-    </p>
-     --}}
 
 
      <x-input.form
