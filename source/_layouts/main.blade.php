@@ -30,11 +30,11 @@
 <body class="font-sans antialiased text-gray-900 transition-colors bg-white dark:text-gray-100 dark:bg-slate-900">
 
     {{-- WRAPPER --}}
-    <div class="max-w-xl mx-auto md:max-w-5xl">
+    <div class="max-w-xl mx-auto md:max-w-6xl">
 
         <header class="px-4 mt-8 mb-8 leading-tight md:mt-12 sm:mb-12 md:mb-16 md:px-8">
 
-            <x-logo class="translate-x-0 lg:-translate-x-10 xl:-translate-x-24" />
+            <x-logo class="translate-x-0 lg:-translate-x-4 xl:-translate-x-24" />
 
             {{-- MOBILE NAV --}}
             <div x-data="{ open: false }"
