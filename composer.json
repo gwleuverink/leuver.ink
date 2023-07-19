@@ -1,8 +1,8 @@
 {
     "require": {
-        "tightenco/jigsaw": "^1.6",
+        "tightenco/jigsaw": "^1.7",
         "ramsey/uuid": "^4.7",
         "torchlight/torchlight-jigsaw": "^0.3",
-        "laravel/pint": "^1.5"
+        "laravel/pint": "^1.10"
     }
 }
