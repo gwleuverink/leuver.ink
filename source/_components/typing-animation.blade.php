@@ -1,5 +1,6 @@
+<!-- __COMPONENT__ layout.typing-animation -->
 @props([
-'text' => ''
+    'text' => ''
 ])
 
 <span
@@ -21,3 +22,4 @@
     @endforeach
 
 </span>
+<!-- __ENDCOMPONENT__ layout.time-tracker-banner -->

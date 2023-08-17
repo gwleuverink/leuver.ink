@@ -1,3 +1,4 @@
+<!-- __COMPONENT__ input.text -->
 @props([
     'disabled' => isset($disabled)
 ])
@@ -10,3 +11,4 @@
     :disabled="state.success || state.submitting || @js($disabled)"
     :id="$id('input')"
 >
+<!-- __ENDCOMPONENT__ input.text -->

@@ -1,3 +1,4 @@
+<!-- __COMPONENT__ layout.logo -->
 <a href="/"
     x-title="logo"
     x-init="$nextTick(() => animated = true)"
@@ -46,3 +47,4 @@
     </div>
 
 </a>
+<!-- __ENDCOMPONENT__ layout.logo -->

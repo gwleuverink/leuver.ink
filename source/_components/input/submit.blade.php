@@ -1,4 +1,5 @@
 
+<!-- __COMPONENT__ input.submit -->
 <button
     type="submit"
     {{ $attributes->merge([
@@ -11,3 +12,4 @@
 
     </span>
 </button>
+<!-- __ENDCOMPONENT__ input.submit -->

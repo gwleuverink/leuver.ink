@@ -1,3 +1,5 @@
+<!-- __COMPONENT__ svg.radical-icons-heart -->
+
 {{-- Radical icons - heart --}}
 <svg {{ $attributes }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.19 42.73">
 
@@ -12,3 +14,5 @@
     <use xlink:href="#heart" />
 
 </svg>
+
+<!-- __ENDCOMPONENT__ svg.radical-icons-heart -->

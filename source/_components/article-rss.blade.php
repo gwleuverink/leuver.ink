@@ -1,3 +1,4 @@
+<!-- __COMPONENT__ layout.article-rss -->
 <entry>
     <id>{{ $article->getUrl() }}</id>
     <link type="text/html" rel="alternate" href="{{ $article->getUrl() }}" />
@@ -16,3 +17,4 @@
         </content>
     --}}
 </entry>
+<!-- __ENDCOMPONENT__ layout.article-rss -->

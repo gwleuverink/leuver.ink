@@ -1,3 +1,4 @@
+<!-- __PARTIAL__ pagination-links -->
 
 @if($paginator->totalPages > 1)
 
@@ -50,5 +51,5 @@
             @endif
         </div>
     </nav>
-
-  @endif
+@endif
+<!-- __ENDPARTIAL__ pagination-links -->

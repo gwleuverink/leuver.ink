@@ -1,3 +1,5 @@
+<!-- __COMPONENT__ svg.radical-icons-slash-wave -->
+
 {{-- Radical icons - svg-slash-wave --}}
 <svg {{ $attributes }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 29.21">
 
@@ -12,3 +14,4 @@
     <use xlink:href="#svg-slash-wave" />
 
 </svg>
+<!-- __ENDCOMPONENT__ svg.radical-icons-slash-wave -->

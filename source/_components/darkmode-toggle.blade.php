@@ -1,4 +1,5 @@
 
+<!-- __COMPONENT__ layout.darkmode-toggle -->
 <button
     x-data
     x-title="darkmode-toggle"
@@ -36,3 +37,4 @@
     ></span>
 
 </button>
+<!-- __ENDCOMPONENT__ layout.darkmode-toggle -->

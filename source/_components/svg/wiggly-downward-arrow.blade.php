@@ -1,4 +1,6 @@
 
+<!-- __COMPONENT__ svg.radical-icons-wiggly-downward-arrow -->
+
 {{-- Radical icons - svg-wiggly-downward-arrow --}}
 <svg {{ $attributes }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.68 208.94">
 
@@ -13,3 +15,4 @@
     <use xlink:href="#svg-wiggly-downward-arrow" />
 
 </svg>
+<!-- __ENDCOMPONENT__ svg.radical-icons-wiggly-downward-arrow -->

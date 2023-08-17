@@ -1,3 +1,4 @@
+<!-- __COMPONENT__ layout.article-excerpt -->
 @props([
     'post' => new \Illuminate\Support\Fluent,
     'divider' => false
@@ -48,3 +49,4 @@
     @if($divider) <x-separator /> @endif
 
 </article>
+<!-- __ENDCOMPONENT__ layout.article-excerpt -->

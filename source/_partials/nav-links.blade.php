@@ -1,3 +1,5 @@
+<!-- __PARTIAL__ nav-links -->
+
 <a
     x-on:click.prevent="
         // Click on the logo instead (so animation triggers)
@@ -27,3 +29,4 @@
 <div class="mt-8">
     <x-darkmode-toggle />
 </div>
+<!-- __ENDPARTIAL__ nav-links -->

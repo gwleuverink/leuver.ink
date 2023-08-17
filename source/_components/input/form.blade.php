@@ -1,3 +1,4 @@
+<!-- __COMPONENT__ input.form -->
 <form
     x-data="{
         form: {}, // For  binding inputs
@@ -53,3 +54,4 @@
     {{ $slot }}
 
 </form>
+<!-- __ENDCOMPONENT__ input.form -->

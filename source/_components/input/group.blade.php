@@ -1,3 +1,4 @@
+<!-- __COMPONENT__ input.group -->
 @props([
     'label' => ''
 ])
@@ -15,3 +16,4 @@
     </div>
 
 </div>
+<!-- __ENDCOMPONENT__ input.group -->

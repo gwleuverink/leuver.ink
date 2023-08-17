@@ -1,3 +1,5 @@
+<!-- __PARTIAL__ konami-code -->
+
 {{--
 Flashes an isnspiring mesage after the konami code is entered
 --}}
@@ -6,9 +8,7 @@ Flashes an isnspiring mesage after the konami code is entered
     x-show="open"
     x-transition
     x-trap.inert.noscroll="open"
-    x-init="
-        quote = selectRandom()
-    "
+    x-init="quote = selectRandom()"
     x-on:keyup.window="() => {
         // Listen for the konami code sequence
         // If the key pressed isn't the current key in the pattern, reset
@@ -67,3 +67,4 @@ Flashes an isnspiring mesage after the konami code is entered
         <blockquote x-text="quote"></blockquote>
     </div>
 </div>
+<!-- __ENDPARTIAL__ konami-code -->
