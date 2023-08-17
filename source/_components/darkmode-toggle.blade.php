@@ -6,6 +6,7 @@
     :aria-checked="$store.darkMode.enabled"
     :class="$store.darkMode.enabled ? 'bg-slate-400' : 'bg-slate-300'"
     class="relative inline-flex py-1 ml-2 transition rounded-full w-14"
+    :aria-label="$store.darkMode.enabled ? 'Disable darkmode' : 'Enable darmode'"
     type="button"
     role="switch"
 >

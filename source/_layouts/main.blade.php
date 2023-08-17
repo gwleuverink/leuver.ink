@@ -42,7 +42,7 @@
                 role="mobile-nav"
                 class="relative flex flex-col md:hidden">
 
-                <button x-on:click="open = !open" class="absolute right-0 p-2 pb-1 font-bold tracking-wider text-white uppercase bg-gray-700 border-gray-900 -top-14 border-b-3">
+                <button x-on:click="open = !open" class="absolute right-0 p-2 pb-1 font-bold tracking-wider text-white uppercase bg-gray-700 border-gray-900 -top-14 border-b-3" aria-label="Toggle menu">
                     Menu
                 </button>
 

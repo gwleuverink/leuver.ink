@@ -3,7 +3,11 @@
 @tailwind utilities;
 @import "torchlight";
 
-/* Tailwind components */
+/*
+|--------------------------------------------------------------------------
+| Tailwind components
+|--------------------------------------------------------------------------
+*/
 ::selection {
     @apply bg-purple-300;
 }
@@ -12,12 +16,16 @@
     @apply bg-slate-700;
 }
 
-/* Dark mode overrides */
+/*
+|--------------------------------------------------------------------------
+| Dark mode overrides
+|--------------------------------------------------------------------------
+*/
 .prose {
     @apply dark:text-slate-400;
 }
 
-.prose a {
+.prose a, .prose strong, .prose i {
     @apply dark:text-slate-200;
 }
 
@@ -29,8 +37,57 @@
     @apply px-0 -mx-4 sm:mx-auto;
 }
 
-/* Misc */
+.prose :where(code):not(:where([class~="not-prose"] *)) {
+    @apply px-1 bg-slate-100 rounded-md dark:text-slate-200 dark:bg-slate-800;
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *))::before,
+.prose :where(code):not(:where([class~="not-prose"] *))::after {
+    content: '';
+}
+
+/*
+|--------------------------------------------------------------------------
+| Misc
+|--------------------------------------------------------------------------
+*/
 html { scroll-behavior: smooth; }
 
-/* Alpine JS */
+/*
+|--------------------------------------------------------------------------
+| Alpine JS
+|--------------------------------------------------------------------------
+*/
 [x-cloak] { display: none !important; }
+
+/*
+|--------------------------------------------------------------------------
+| Torchlight
+|--------------------------------------------------------------------------
+*/
+/* Dark mode background */
+html.dark .torchlight {
+    background-color: rgb(11, 17, 31) !important;
+}
+/* Light mode background */
+html:not(.dark) .torchlight {
+    @apply !bg-slate-700;
+}
+
+/*
+  Blur and dim the lines that don't have the `.line-focus` class,
+  but are within a code block that contains any focus lines.
+*/
+.torchlight.has-focus-lines .line:not(.line-focus) {
+    transition: filter 0.35s, opacity 0.35s;
+    filter: blur(.095rem);
+    opacity: .65;
+}
+
+/*
+  When the code block is hovered, bring all the lines into focus.
+*/
+.torchlight.has-focus-lines:hover .line:not(.line-focus) {
+    filter: blur(0px);
+    opacity: 1;
+}
