@@ -92,8 +92,8 @@
     {{-- END WRAPPER --}}
 
 
-    @include('_partials.konami-code')
     @include('_partials.svg-definitions')
+    @include('_partials.konami-code')
 
 </body>
 

@@ -17,7 +17,7 @@
     Writings
 </a>
 
-<a href="{{ $page->baseUrl }}software/time-tracker-for-clickup" class="{{ $page->selected('software') }}">
+<a href="{{ $page->baseUrl }}software" class="{{ $page->selected('software') }}">
     Software
 </a>
 

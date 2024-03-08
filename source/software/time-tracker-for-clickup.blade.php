@@ -26,7 +26,7 @@ title: Time Tracker for ClickUp
         </p>
     </div>
 
-    <x-time-tracker-banner />
+    <x-callouts.time-tracker-banner />
 
     <div class="prose prose-xl">
         <p>

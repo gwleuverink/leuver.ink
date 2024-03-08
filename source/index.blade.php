@@ -18,7 +18,7 @@ pagination:
     </p>
 
     <p>
-        So heck, you've found yourself here. Here's what you can expect: Some programming related <a href="{{ $page->baseUrl }}blog">articles</a> that might interest you, Some highlighted <a href="{{ $page->baseUrl }}software/time-tracker-for-clickup">side projects</a> I work on. And how to <a href="{{ $page->baseUrl }}software/time-tracker-for-clickup">get in touch</a>.
+        So heck, you've found yourself here. Here's what you can expect: Some programming related <a href="{{ $page->baseUrl }}blog">articles</a> that might interest you, Some highlighted <a href="{{ $page->baseUrl }}software">side projects</a> I work on. And how to <a href="{{ $page->baseUrl }}software/time-tracker-for-clickup">get in touch</a>.
     </p>
 
     <p>
@@ -45,6 +45,6 @@ pagination:
     </a>
 </div>
 
-<x-time-tracker-banner class="mt-12" />
+<x-callouts.time-tracker-banner class="mt-12" />
 
 @endsection

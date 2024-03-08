@@ -9,11 +9,11 @@
 |--------------------------------------------------------------------------
 */
 ::selection {
-    @apply bg-purple-300;
+  @apply bg-purple-300;
 }
 
 .dark ::selection {
-    @apply bg-slate-700;
+  @apply bg-slate-700;
 }
 
 /*
@@ -21,29 +21,45 @@
 | Dark mode overrides
 |--------------------------------------------------------------------------
 */
+html:not(.dark) {
+  /* light scrollbar */
+  color-scheme: light;
+}
+html.dark {
+  /* dark scrollbar */
+  color-scheme: dark;
+}
+
 .prose {
-    @apply dark:text-slate-400;
+  @apply dark:text-slate-400;
 }
 
-.prose a, .prose strong, .prose i {
-    @apply dark:text-slate-200;
+.prose a,
+.prose strong,
+.prose i {
+  @apply dark:text-slate-200;
 }
 
-.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose blockquote {
-    @apply dark:text-slate-300;
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose blockquote {
+  @apply dark:text-slate-300;
 }
 
 .prose-xl pre {
-    @apply px-0 -mx-4 sm:mx-auto;
+  @apply px-0 -mx-4 sm:mx-auto;
 }
 
 .prose :where(code):not(:where([class~="not-prose"] *)) {
-    @apply px-1 bg-slate-100 rounded-md dark:text-slate-200 dark:bg-slate-800;
+  @apply px-1 bg-slate-100 rounded-md dark:text-slate-200 dark:bg-slate-800;
 }
 
 .prose :where(code):not(:where([class~="not-prose"] *))::before,
 .prose :where(code):not(:where([class~="not-prose"] *))::after {
-    content: '';
+  content: "";
 }
 
 /*
@@ -51,14 +67,18 @@
 | Misc
 |--------------------------------------------------------------------------
 */
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 /*
 |--------------------------------------------------------------------------
 | Alpine JS
 |--------------------------------------------------------------------------
 */
-[x-cloak] { display: none !important; }
+[x-cloak] {
+  display: none !important;
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -67,11 +87,11 @@ html { scroll-behavior: smooth; }
 */
 /* Dark mode background */
 html.dark .torchlight {
-    background-color: rgb(11, 17, 31) !important;
+  background-color: rgb(11, 17, 31) !important;
 }
 /* Light mode background */
 html:not(.dark) .torchlight {
-    @apply !bg-slate-700;
+  @apply !bg-slate-700;
 }
 
 /*
@@ -79,15 +99,15 @@ html:not(.dark) .torchlight {
   but are within a code block that contains any focus lines.
 */
 .torchlight.has-focus-lines .line:not(.line-focus) {
-    transition: filter 0.35s, opacity 0.35s;
-    filter: blur(.095rem);
-    opacity: .65;
+  transition: filter 0.35s, opacity 0.35s;
+  filter: blur(0.095rem);
+  opacity: 0.65;
 }
 
 /*
   When the code block is hovered, bring all the lines into focus.
 */
 .torchlight.has-focus-lines:hover .line:not(.line-focus) {
-    filter: blur(0px);
-    opacity: 1;
+  filter: blur(0px);
+  opacity: 1;
 }
