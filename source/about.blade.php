@@ -14,36 +14,21 @@ title: About
         </div>
 
         <div>
-            <p>Before you you might see one of the great philosophers, staring into the distance, pondering the finer meaning of existence</p>
-            <p>Looks can be deceiving however, it is just me</p>
+            <p>Before you, you might envision one of the great philosophers, lost in contemplation, unraveling the profound enigmas of existence.</p>
+            <p>Appearances can be deceptive, for it is just little ol' me.</p>
         </div>
     </div>
 
-    {{--
-    <p>
-        If you've got this far, I'd just like to say.. Hi mum, I know it's you. I've got my own website. Next time you ask me what it is I do, I'll just refer you back to this page.
-    </p>
-    --}}
+
 
     <p>
-        I am a engineer by trade. Creative problem solving is what I do. Wherether that'd be by writing code or finding solutions that help businesses improve their efficiency.
+        I am a engineer by trade. My craft lies in the realm of creative problem-solving. Whether coding up a storm or finding ways to streamline business efficiency, that's my jam.
     </p>
-
-    {{--
-    <p>
-        A good program has much in common with written prose. It it is an expression of creativity. Clear in how it communicates it's intent and iterated over many times untill it is as perfect as can be.
-    </p>
-
-    <p>
-        A hallmark of good software in my opinion is not only that is well designed, written with the right abstractions & rigourosly tested. But it also has a certain astetic only an seasoned programmer might appreciate.
-        In that regard, I consider programming a highly creative endeavor. One that I pull a lot of satisfaction from.
-    </p>
-    --}}
 
     <x-separator />
 
     <p>
-        Feel free to drop me a line! I'm available for your regular shop talk, freelance project work, consulting & pair sessions.
+        I'm always down for some shop talk, freelance gigs, consulting, or pair programming sessions. Drop me a line anytime.
     </p>
 
 
