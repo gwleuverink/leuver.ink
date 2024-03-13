@@ -1,6 +1,4 @@
 <!-- __PARTIAL__ svg-definitions -->
-
-<!-- SVG Definitions -->
 <svg class="absolute top-0 -left-96 z-[-999]">
 
     <defs>

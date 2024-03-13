@@ -16,6 +16,14 @@
     <link rel="manifest" href="/app.webmanifest">
     <link rel="canonical" href="{{ $page->getUrl() }}">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3V846Y2C35"></script>
+    <script>
+        window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3V846Y2C35');
+    </script>
+
     <!-- CSS Bundle -->
     <link href="{{ mix('css/app.css', 'assets/build') }}" rel="stylesheet">
     <link href="{{ mix('css/font.css', 'assets/build') }}" rel="preload stylesheet" as="style" crossorigin="anonymous" />
@@ -29,7 +37,7 @@
 
 <body class="font-sans antialiased text-gray-900 transition-colors bg-white dark:text-gray-100 dark:bg-slate-900">
 
-    {{-- WRAPPER --}}
+    <!-- WRAPPER -->
     <div class="max-w-xl mx-auto md:max-w-6xl">
 
         <header class="px-4 mt-8 mb-8 leading-tight md:mt-12 sm:mb-12 md:mb-16 md:px-8">
@@ -89,8 +97,7 @@
         </div>
 
     </div>
-    {{-- END WRAPPER --}}
-
+    <!-- END WRAPPER -->
 
     @include('_partials.svg-definitions')
     @include('_partials.konami-code')
