@@ -34,4 +34,4 @@ jobs:
           git config --global user.name "leuver.ink CI"
           git config --global user.email "gwleuverink@users.noreply.github.com"
           git add --force build_production && git commit -m "Build for deploy"
-          git subtree push --force --prefix build_production origin gh-pages
+          git push origin `git subtree split --prefix build_production main`:gh-pages --force
