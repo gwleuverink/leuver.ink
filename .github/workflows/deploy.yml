@@ -42,6 +42,8 @@ jobs:
       - uses: "ramsey/composer-install@v3"
 
       - name: Build for production
+        env:
+          TORCHLIGHT_API_TOKEN: ${{ secrets.TORCHLIGHT_API_TOKEN }}
         run: npm run prod
 
       #   - name: Commit production directory
