@@ -48,11 +48,11 @@ title: About
                 <x-input.text x-model="form.email" name="email" type="email" autocomplete="email" required />
             </x-input.group>
 
-            <x-input.group label="What's your name" class="col-span-2 sm:col-span-1">
+            <x-input.group label="What's your name?" class="col-span-2 sm:col-span-1">
                 <x-input.text x-model="form.name" name="name" autocomplete="given-name" required />
             </x-input.group>
 
-            <x-input.group label="Drop me a line!" class="col-span-2">
+            <x-input.group label="Where lines should be dropped" class="col-span-2">
                 <x-input.textarea x-model="form.message" name="message" required />
             </x-input.group>
 
@@ -73,7 +73,7 @@ title: About
             </span>
 
             <x-input.submit ::disabled="state.success || state.submitting">
-                submit
+                Shoot me a message
             </x-input.submit>
 
         </div>
