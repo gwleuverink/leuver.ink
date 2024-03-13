@@ -24,16 +24,15 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: "8.3"
-      - uses: "ramsey/composer-install@v2"
+      - uses: "ramsey/composer-install@v3"
 
       - name: Build for production
         run: npm run prod
 
       - name: Commit production directory
-        run: |
-          git config --global user.name "leuver.ink CI"
-          git config --global user.email "username@users.noreply.github.com"
-          git add -f build_production && git commit -m "Build for deploy"
-
-      - name: Push subtree to gh-pages branch
-        run: git subtree push --prefix build_production origin gh-pages
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "build for production"
+          file_pattern: "/build_production/*"
+          create_branch: true
+          branch: gh_pages
