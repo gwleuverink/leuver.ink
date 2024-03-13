@@ -30,12 +30,8 @@ jobs:
         run: npm run prod
 
       - name: Commit production directory
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "build for production"
-          file_pattern: "build_production/*"
-          push_options: "--force"
-          add_options: "--force"
-          skip_checkout: true
-          create_branch: true
-          branch: gh_pages
+        run: |
+          git config --global user.name "leuver.ink CI"
+          git config --global user.email "gwleuverink@users.noreply.github.com"
+          git add -f build_production && git commit -m "Build for deploy"
+          git subtree push --prefix build_production origin gh-pages
