@@ -30,7 +30,10 @@ jobs:
         run: npm run prod
 
       - name: Commit production directory
-        run: git add -f build_production && git commit -m "Build for deploy"
+        run: |
+          git config --global user.name "leuver.ink CI"
+          git config --global user.email "username@users.noreply.github.com"
+          git add -f build_production && git commit -m "Build for deploy"
 
       - name: Push subtree to gh-pages branch
         run: git subtree push --prefix build_production origin gh-pages
