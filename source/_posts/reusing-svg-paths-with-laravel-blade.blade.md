@@ -14,7 +14,7 @@ In the server-side rendered world I inhabit it is common practice to extract the
 
 In 99% of cases this works perfectly fine. But imagine if you will, You are using 3 different SVG icons on a table which has 100 rows. This results in 300 inlined SVG's on the page (with probably multiple xml nodes each).
 
-A you might imagine, this can become unwieldy quick and results in large page responses due to all the duplicated markup that comes with the request. Not even speaking about the impact it can have when using a [DOM diffing algorithm](https://livewire.laravel.com/docs/morphing#how-morphing-works) like Livewire & AlpineJS do under the hood.
+As you might imagine, this can result in large page responses due to all the duplicated markup that comes with the request. Not even speaking about the impact it can have when using a [DOM diffing algorithm](https://livewire.laravel.com/docs/morphing#how-morphing-works) like Livewire & AlpineJS do under the hood.
 
 Therein lies a huge opportunity to reduce request sizes and squeeze more performance out of your page.
 
