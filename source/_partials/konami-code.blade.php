@@ -1,9 +1,4 @@
-<!-- __PARTIAL__ konami-code -->
-
-{{--
-Flashes an isnspiring mesage after the konami code is entered
---}}
-
+<!-- __PARTIAL__ konami-code - ↑↑ ↓↓ ←→ ←→ B A -->
 <div x-title="konami-code"
     x-show="open"
     x-transition

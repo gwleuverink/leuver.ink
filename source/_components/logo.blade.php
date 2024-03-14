@@ -22,7 +22,7 @@
         () => window.location = '/'
     )"
     {{ $attributes->class('logo inline-block -skew-x-12 select-none min-h-[60px] transition transform-gpu') }}
-    role="banner"
+    role="navigation"
     aria-label="Back to home">
 
     <div
