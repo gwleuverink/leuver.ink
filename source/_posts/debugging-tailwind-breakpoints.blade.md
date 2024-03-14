@@ -5,7 +5,7 @@ tags: [Tailwind, Laravel]
 published: true
 
 title: Debugging Tailwind CSS Breakpoints
-date: 2024-01-13
+date: 2024-03-13
 readTime: 2 minute read
 ---
 

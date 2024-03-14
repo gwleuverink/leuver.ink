@@ -5,7 +5,7 @@ tags: [Laravel, Blade, Performance]
 published: true
 
 title: Reusing svg paths with Laravel Blade
-date: 2023-11-04
+date: 2024-03-04
 readTime: 10 minute read
 ---
 
