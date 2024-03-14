@@ -14,7 +14,7 @@ In the server-side rendered world I inhabit it is common practice to extract the
 
 In 99% of cases this works perfectly fine. But imagine if you will, You are using 3 different SVG icons on a table which has 100 rows. This results in 300 inlined SVG's on the page (with probably multiple xml nodes each).
 
-As you might imagine, this can result in large page responses due to all the duplicated markup that comes with the request. Not even speaking about the impact it can have when using a [DOM diffing algorithm](https://livewire.laravel.com/docs/morphing#how-morphing-works) like Livewire & AlpineJS do under the hood.
+As you might imagine, this can result in large page responses due to all the duplicated markup that comes with the request. Not even speaking of the impact it can have when using a [DOM diffing algorithm](https://livewire.laravel.com/docs/morphing#how-morphing-works) like Livewire & AlpineJS do under the hood.
 
 Therein lies a huge opportunity to reduce request sizes and squeeze more performance out of your page.
 
@@ -22,11 +22,12 @@ Therein lies a huge opportunity to reduce request sizes and squeeze more perform
 
 For example; Measured on a Macbook Pro (Apple M2 Max) Using _3000_ svg's containing only _3_ path nodes each we see browser timings increase dramatically.
 
-|              | With svg definitions | Without svg definitions |
-| ------------ | -------------------- | ----------------------- |
-| Blade render | **40ms**             | **10ms**                |
-| DOM morphing | **734ms**            | **43ms**                |
-| Memory usage | **1.4mb**            | **0.3mb**               |
+|               | Withot svg definitions | With svg definitions |
+| ------------- | ---------------------- | -------------------- |
+| Response size | **30kb**               | **8kb**              |
+| Blade render  | **40ms**               | **10ms**             |
+| DOM morphing  | **734ms**              | **43ms**             |
+| Memory usage  | **1.4mb**              | **0.3mb**            |
 
 Heck that makes quite a big difference! Free performance? I'm all about that shit. Let's dive right in. -->
 
@@ -70,8 +71,7 @@ Using this you can get very creative. Have multiple SVG's with different viewbox
 
 ### Integrating with Blade
 
-This is very cool and all, but a big hastle to manage. Naturally we don't want to define _all_ our SVG paths here, even when we don't need them.
-So, how do we make this convenient so we don't even have to think about it?
+This is very cool and all, but a big hastle to manage by hand. Naturally we don't want to define _all_ our SVG paths here, even when we don't need them. So, how do we make this convenient so we don't even have to think about it?
 
 Using Laravel blade's `@@stack` & `@@push` directives this is a fairly simple process. Firstly we need to create a component or partial that holds our definitions.
 
