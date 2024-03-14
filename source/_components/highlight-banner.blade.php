@@ -6,4 +6,4 @@
 
     <div class="absolute bottom-0 w-full h-2 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"></div>
 </div>
-<!-- __ENDCOMPONENT__ layout.darkmode-toggle -->
+<!-- __ENDCOMPONENT__ layout.highlight-banner -->
