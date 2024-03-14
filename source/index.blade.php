@@ -12,7 +12,7 @@ pagination:
 
 <div class="prose prose-xl">
 
-    <p role="heading">
+    <p role="heading" aria-level="2">
         I'm <a href="https://twitter.com/gwleuverink" target="_blank">Willem</a>, I work as a full-stack web developer <a href="https://mediacode.nl" target="_blank">@mediacode</a>. Currently enamoured with
         <a href="https://laravel.com" target="_blank">Laravel</a>, <a href="https://laravel-livewire.com" target="_blank">Livewire</a>, <a href="https://www.alpinejs.dev" target="_blank">AlpineJS</a> & <a href="https://tailwindcss.com" target="_blank">Tailwind</a>.
         And let me be honest for a second, this thing has grown way past affection <x-svg.heart class="inline w-6 h-6 ml-1" />

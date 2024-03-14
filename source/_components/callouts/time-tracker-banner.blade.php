@@ -7,7 +7,7 @@
     x-data="{ shown: false }"
     x-intersect.once="shown = true"
     :class="shown ? 'opacity-100' : 'opacity-0'"
-    role="time-tracker-banner"
+    role="banner"
     {{ $attributes->class('
         transition-opacity duration-200 ease-in delay-100
         flex flex-col sm:flex-row p-6 my-10 space-x-6 select-none rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500

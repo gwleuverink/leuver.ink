@@ -9,7 +9,7 @@
     x-intersect.once="shown = true"
     :class="shown ? 'opacity-100' : 'opacity-0'"
     class="transition-opacity duration-300 ease-in delay-300"
-    role="fade-in-excerpt"
+    role="article"
 >
 
     <header class="mb-6">

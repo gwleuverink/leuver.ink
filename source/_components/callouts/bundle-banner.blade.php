@@ -4,7 +4,7 @@
     x-data="{ shown: false }"
     x-intersect.once="shown = true"
     :class="shown ? 'opacity-100' : 'opacity-0'"
-    role="bundle-banner"
+    role="banner"
     {{ $attributes->class('
         transition-opacity duration-200 ease-in delay-100
         p-6 space-x-6 select-none rounded-2xl bg-indigo-900
