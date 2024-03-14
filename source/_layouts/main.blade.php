@@ -49,10 +49,7 @@
             <x-logo class="translate-x-0 lg:-translate-x-4 xl:-translate-x-24" />
 
             {{-- MOBILE NAV --}}
-            <div x-data="{ open: false }"
-                aria-modal="true"
-                role="mobile-nav"
-                class="relative flex flex-col md:hidden">
+            <div x-data="{ open: false }" class="relative flex flex-col md:hidden">
 
                 <button x-on:click="open = !open" class="absolute right-0 p-2 pb-1 font-bold tracking-wider text-white uppercase bg-gray-700 border-gray-900 -top-14 border-b-3" aria-label="Toggle menu">
                     Menu
@@ -62,6 +59,7 @@
                     x-show="open"
                     x-transition
                     x-trap.inert.noscroll="open"
+                    aria-modal="true"
                     class="flex flex-col justify-center min-h-screen px-8 pt-10 pb-2 -mt-20 text-3xl text-center select-none">
 
                     @include('_partials.nav-links')

@@ -1,5 +1,4 @@
 <!-- __PARTIAL__ pagination-links -->
-
 @if($paginator->totalPages > 1)
 
     <nav class="flex items-center justify-between px-4 mt-16 text-xl border-t border-slate-300 dark:border-slate-800 sm:px-0">
