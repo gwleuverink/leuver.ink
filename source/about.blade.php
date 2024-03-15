@@ -28,7 +28,7 @@ title: About
     <x-separator />
 
     <p>
-        I'm always down for some shop talk, freelance gigs, consulting, or pair programming sessions. Drop me a line anytime.
+        I'm always down for shop talk, freelance gigs, consulting, or pair programming sessions. Drop me a line anytime.
     </p>
 
 
