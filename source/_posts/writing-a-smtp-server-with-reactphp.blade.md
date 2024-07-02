@@ -5,8 +5,8 @@ tags: [ReactPHP, Experiment]
 published: true
 
 title: Implementing a SMTP server with ReactPHP
-date: 2024-04-29
-readTime: 30 minute read
+date: 2024-07-02
+readTime: 20 minute read
 ---
 
 Let's be real - debugging emails in web development used to be a massive headache in the past. Tools like [Helo](https://beyondco.de/software/helo) or services like [Mailtrap](https://mailtrap.io/) make testing emails easier than ever before. I've recently set out to build [Phost](https://github.com/gwleuverink/phost), a similar tool built with [NativePHP](https://nativephp.com/). Purely out of interest, to see if it could be done with PHP alone. The foundation of this side project is a local SMTP server, implemented with ReactPHP.
