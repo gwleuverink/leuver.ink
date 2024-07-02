@@ -36,7 +36,7 @@ I find providing callback hooks to classes to be a pretty versatile & scalable a
 
 ### Let's review the SMTP protocol
 
-The SMTP protocol built on top of the **TCP/IP protocol** that typically listens on port **25**. For the purposes of this post I'll omit the authentication handshake, since we're building a local SMTP server used for debugging there is no auth required. So, let's dig in.
+The SMTP protocol built on top of the **TCP/IP protocol** that typically listens on port **25**. For the purposes of this post I'll omit the authentication handshake, since we're building a local SMTP server used for debugging there is no auth required. So, let's dig right in.
 
 In essence, the SMTP protocol follows a straightforward request-response pattern between the client (sender) and the server (receiver). Here's a concise overview of the process:
 
@@ -167,7 +167,7 @@ Admittidly this method is very chunky, since we're basically sending & receiving
 
 To make this a bit more readable, we'll assume this is run within a Laravel app. So we can use Laravel's [Fluent string](https://laravel.com/docs/11.x/strings#fluent-strings-method-list) methods to iterate over and match messages the client sends to the server.
 
-So, let's go through the protocol step by step.
+So, let's go through the protocol step by step. All steps from the 'SMTP protocol in review' heading above are annotated in the comments so hopefully it's a bit easier to follow.
 
 ```php
 public function serve(): void
@@ -176,7 +176,7 @@ public function serve(): void
     $this->socket = new SocketServer(self::HOST . ':' . $this->port, [], $this->loop);
 
 
-    // Step 1 - Your server is running! Now, the `connection` callback is invoked when a client
+    // Step 1 - Your server is running! Now, the `connection` callback is invoked when a client [tl! highlight:2]
     // establishes a SMTP connection. This is where the protocol implementation starts.
     $this->socket->on('connection', function (ConnectionInterface $connection) {
 
@@ -187,7 +187,7 @@ public function serve(): void
         $transferring = false;
 
 
-        // Step 2 - Instruct the client to start sending the data stream by dispatching a 220 Ready reply.
+        // Step 2 - Instruct the client to start sending the data stream by dispatching a 220 Ready reply. [tl! highlight:1]
         $connection->write(Reply::Ready->value . " Ok!\r\n");
 
         // These were steps 1 & 2. The client will now initiate the data transfer.
