@@ -163,7 +163,7 @@ enum Reply: string
 
 Now all this is out of the way let's implement the protocol in the **serve** method.
 
-Admittidly this method is very chunky, since we're basically sending & receiving messages within a big eventloop. It's a bit of a challenge to get your mind around, but keeping it in a single method like this is probably the best way to convey how to implement the steps as described above. We'll refactor this later!
+Admittidly this method is very chunky, since we're basically sending & receiving messages within a big event loop. It's a bit of a challenge to get your mind around, but keeping it in a single method like this is probably the best way to convey how to implement the steps as described above. We'll refactor this later!
 
 To make this a bit more readable, we'll assume this is run within a Laravel app. So we can use Laravel's [Fluent string](https://laravel.com/docs/11.x/strings#fluent-strings-method-list) methods to iterate over and match messages the client sends to the server.
 
