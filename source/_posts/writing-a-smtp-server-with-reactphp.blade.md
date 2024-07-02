@@ -377,4 +377,4 @@ Now, if you configure any local project to use localhost port 2525 as a SMTP ser
 
 This by itself is pretty cool, but combined with the excellent [`zbateson/mail-mime-parser`](https://github.com/zbateson/mail-mime-parser) package you are able to extract all sorts of information from the raw email. Like, html & text versions, headers, attachments e.t.c.
 
-These two components form the basis of Phost, the NativePHP project i'm experimenting with. At the time of writing the app is not yet released, But stay tuned for more!
+These two components form the basis of Phost, the NativePHP project i'm experimenting with. At the time of writing the app is not yet released, But stay tuned for more and check out [the repo](https://github.com/gwleuverink/phost)!
