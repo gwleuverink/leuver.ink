@@ -6,7 +6,7 @@ return [
     'production' => false,
     'baseUrl' => 'http://localhost:3001/',
     'title' => 'Project X',
-    'description' => 'Website description.',
+    'description' => '',
     'siteAuthor' => 'Willem Leuverink',
     'siteName' => 'Willem\'s Blog',
 

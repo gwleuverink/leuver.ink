@@ -1,6 +1,6 @@
 ---
 title: Willem's blog
-description: Join me on my coding journey as a full-stack developer enamored with Laravel and the TALL stack. This is where I document my learnings through articles and showcase side projects. Come geek out with me!
+description: Join me on my coding journey. This is where I document my learnings through articles and showcase side projects. Come geek out with me!
 pagination:
   collection: posts
   perPage: 3

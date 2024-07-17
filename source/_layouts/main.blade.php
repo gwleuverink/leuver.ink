@@ -10,9 +10,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{ $page->description }}">
 
     <title>{{ $page->title }}</title>
+    <meta name="description" content="{{ $page->description }}">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@gwleuverink">
+    <meta name="twitter:title" content="{{ $page->title }}">
+    <meta name="twitter:description" content="{{ $page->description }}">
+    @if($page->image)
+    <meta name="twitter:image" content="{{ $page->baseUrl . $page->image }}">
+    @endif
+
     <link rel="manifest" href="/app.webmanifest">
     <link rel="canonical" href="{{ $page->getUrl() }}">
 
