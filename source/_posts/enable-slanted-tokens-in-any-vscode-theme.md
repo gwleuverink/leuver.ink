@@ -5,7 +5,7 @@ tags: [vscode]
 published: true
 
 title: Enable slanted tokens in any VSCode theme
-date: 2024-07-16
+date: 2024-07-17
 readTime: 5 minute read
 description: If you've invested in a specialized coding font, you shouldn't be limited to a handful of compatible themes. The good news? You don't have to be. Let's explore how to enable slanted tokens in any VSCode theme!
 image: assets/images/slanted-mono-font.jpg
@@ -17,7 +17,7 @@ However, not every VSCode theme supports these stylish slanted tokens out of the
 
 Let's explore how to enable slanted tokens in any VSCode theme, using Mono Lisa as our example font and the beautiful [Midnight City](https://marketplace.visualstudio.com/items?itemName=dillonchanis.midnight-city) theme (which doesn't include an _italics_ variant).
 
-<img class="max-w-lg mx-auto mt-4 mb-5 rounded-xl drop-shadow-2xl" src="/assets/images/slanted-mono-font.jpg" alt="Mono Lisa with slanted tokens enabled">
+<img class="mx-auto mt-4 mb-5 sm:max-w-lg rounded-xl drop-shadow-2xl" src="/assets/images/slanted-mono-font.jpg" alt="Mono Lisa with slanted tokens enabled">
 
 ### Setting Up Your Font
 
