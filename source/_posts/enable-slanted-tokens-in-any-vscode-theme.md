@@ -5,7 +5,7 @@ tags: [vscode]
 published: true
 
 title: Enable slanted tokens in any VSCode theme
-date: 2024-07-17
+date: 2024-07-18
 readTime: 5 minute read
 description: If you've invested in a specialized coding font, you shouldn't be limited to a handful of compatible themes. The good news? You don't have to be. Let's explore how to enable slanted tokens in any VSCode theme!
 image: assets/images/slanted-mono-font.jpg
