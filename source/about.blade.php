@@ -20,7 +20,7 @@ title: About
     </div>
 
     <p>
-        I'm a hands-on engineer who enjoys the challenge of driving projects from initial concept to final deployment. Leveraging the full technology stack to solve complex problems. If i'd to give it a name; It's creative problem solving by technical means that I love to do.
+        I'm a hands-on engineer who enjoys the challenge of driving projects from initial concept to final deployment. Leveraging the full technology stack to solve complex problems. Creative problem solving by technical means that I love to do.
     </p>
 
     <p>
