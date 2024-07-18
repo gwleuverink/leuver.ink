@@ -14,6 +14,11 @@
     <title>{{ $page->title }}</title>
     <meta name="description" content="{{ $page->description }}">
 
+    <!-- og tags -->
+    <meta property="og:title" content="{{ $page->title }}" />
+    <meta property="og:description" content="{{ $page->description }}" />
+    <meta property="og:image" content="{{ $page->baseUrl . $page->image }}" />
+
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@gwleuverink">
