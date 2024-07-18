@@ -3,7 +3,7 @@
 <html
     x-data
     x-effect="$el.classList.toggle('dark', $store.darkMode.enabled)"
-    lang="{{ $page->language ?? 'en' }}"
+    lang="{{ $page->language ?? 'en_US' }}"
 >
 
 <head>
@@ -15,9 +15,10 @@
     <meta name="description" content="{{ $page->description }}">
 
     <!-- og tags -->
+    <meta property="og:locale" content="en_US" />
     <meta property="og:title" content="{{ $page->title }}" />
     <meta property="og:description" content="{{ $page->description }}" />
-    <meta property="og:image" content="{{ $page->baseUrl . $page->image }}" />
+    <meta property="og:image" content="{{ $page->baseUrl . $page->image ?? 'assets/favicon/android-chrome-512x512.png' }}" />
     <meta property="og:url" content="{{ $page->getUrl() }}" />
 
 
@@ -27,7 +28,7 @@
     <meta name="twitter:title" content="{{ $page->title }}">
     <meta name="twitter:description" content="{{ $page->description }}">
     @if($page->image)
-    <meta name="twitter:image" content="{{ $page->baseUrl . $page->image }}">
+    <meta name="twitter:image" content="{{ $page->baseUrl . $page->image ?? 'assets/favicon/android-chrome-512x512.png' }}">
     @endif
 
     <link rel="manifest" href="/app.webmanifest">
