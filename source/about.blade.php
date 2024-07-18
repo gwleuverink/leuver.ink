@@ -19,13 +19,33 @@ title: About
         </div>
     </div>
 
-
+    <p>
+        I'm a hands-on engineer who enjoys the challenge of driving projects from initial concept to final deployment. Leveraging the full technology stack to solve complex problems. If i'd to give it a name; It's creative problem solving by technical means that I love to do.
+    </p>
 
     <p>
-        I am a engineer by trade. My craft lies in the realm of creative problem-solving. Whether coding up a storm or finding ways to streamline business efficiency, that's my jam.
+        With over 11 years of experience, I've attained a diverse skill set across various stacks and gained valuable perspective on the evolution of software development practices.
     </p>
 
     <x-separator />
+
+    <div class="flex space-x-3">
+        <a href="https://github.com/gwleuverink" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-125">
+            <x-svg.social.github class="size-6" />
+        </a>
+
+        <a href="https://x.com/gwleuverink" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-125">
+            <x-svg.social.twitter class="size-6" />
+        </a>
+
+        <a href="https://pinkary.com/@gwleuverink" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-125">
+            <x-svg.social.pinkary class="size-6" />
+        </a>
+
+        <a href="https://laradir.com/developers/bca3e876-7cb7-4ee3-acde-4bb461509bcf" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-125">
+            <x-svg.social.laradir class="size-6" />
+        </a>
+    </div>
 
     <p>
         I'm always down for shop talk, freelance gigs, consulting, or pair programming sessions. Drop me a line anytime.
