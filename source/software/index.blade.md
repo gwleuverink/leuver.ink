@@ -18,7 +18,7 @@ title: Software
     <li>
         <x-callouts.anonymous
             title="Magic Todo"
-            description="Magically turn HTML comments into interactive hints in your Laravel Blade frontend."
+            description="Magically turn HTML comments into interactive hints in your Laravel Blade frontend"
             :buttons="[
                 'GitHub' => 'https://github.com/gwleuverink/magic-todo'
             ]"
