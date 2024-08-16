@@ -22,7 +22,7 @@ title: Software
             :buttons="[
                 'GitHub' => 'https://github.com/gwleuverink/magic-todo'
             ]"
-            class="bg-fuchsia-800"
+            class="!bg-fuchsia-800"
         />
     </li>
     <li>
