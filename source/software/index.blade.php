@@ -74,7 +74,7 @@ title: Software
 
         <li>
             <x-callouts.bundle-banner
-                x-show="matchesSearchCriteria('bundle laravel livewire package assets tool')"
+                x-show="matchesSearchCriteria('bundle laravel blade js javascript import export livewire package assets tool')"
             />
         </li>
 
@@ -112,7 +112,7 @@ title: Software
         <li>
             <x-callouts.anonymous
                 title="Magic Todo"
-                x-show="matchesSearchCriteria('magic todo laravel package key keystroke tool')"
+                x-show="matchesSearchCriteria('magic todo laravel blade package key keystroke tool')"
                 description="Aren't todo comments the worst? Turn them into interactive, in-your-face reminders with a single keystroke"
                 :buttons="[
                     'GitHub' => 'https://github.com/gwleuverink/magic-todo'
