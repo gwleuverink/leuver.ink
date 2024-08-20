@@ -1,6 +1,7 @@
 <!-- __COMPONENT__ callouts.workspace-banner -->
 
 <div
+    x-transitioninput
     x-data="{ shown: false }"
     x-intersect.once="shown = true"
     :class="shown ? 'opacity-100' : 'opacity-0'"

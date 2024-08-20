@@ -7,6 +7,7 @@
 ])
 
 <div
+    x-transition
     x-data="{ shown: false }"
     x-intersect.once="shown = true"
     :class="shown ? 'opacity-100' : 'opacity-0'"
