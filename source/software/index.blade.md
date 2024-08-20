@@ -16,13 +16,25 @@ title: Software
         <x-callouts.workspace-banner />
     </li>
     <li>
+        <x-callouts.phost-banner />
+    </li>
+    <li>
+        <x-callouts.anonymous
+            title="Asset Injector"
+            description="Streamline Laravel package development by automatically inserting JS and CSS into web responses. Eliminate manual asset inclusion for your users"
+            :buttons="[
+                'GitHub' => 'https://github.com/gwleuverink/asset-injector'
+            ]"
+            class="!bg-fuchsia-800"
+        />
+    </li>
+    <li>
         <x-callouts.anonymous
             title="Magic Todo"
-            description="Magically turn HTML comments into interactive hints in your Laravel Blade frontend"
+            description="Aren't todo comments the worst? Turn them into interactive, in-your-face reminders with a single keystroke"
             :buttons="[
                 'GitHub' => 'https://github.com/gwleuverink/magic-todo'
             ]"
-            class="!bg-fuchsia-800"
         />
     </li>
     <li>
