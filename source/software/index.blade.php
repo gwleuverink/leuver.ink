@@ -74,7 +74,7 @@ title: Software
 
         <li>
             <x-callouts.bundle-banner
-                x-show="matchesSearchCriteria('bundle laravel blade js javascript import export livewire package assets tool')"
+                x-show="matchesSearchCriteria('bundle laravel blade js javascript modules import export livewire package assets tool')"
             />
         </li>
 
