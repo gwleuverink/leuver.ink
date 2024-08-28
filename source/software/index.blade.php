@@ -111,6 +111,17 @@ title: Software
 
         <li>
             <x-callouts.anonymous
+                title="Livewire property groups"
+                x-show="matchesSearchCriteria('livewire group grouped property properties attribute package')"
+                description="Simplify property management, validation, and manipulation in Livewire components by organizing related properties into named groups"
+                :buttons="[
+                    'GitHub' => 'https://github.com/gwleuverink/livewire-property-group'
+                ]"
+            />
+        </li>
+
+        <li>
+            <x-callouts.anonymous
                 title="Magic Todo"
                 x-show="matchesSearchCriteria('magic todo laravel blade package key keystroke tool')"
                 description="Aren't todo comments the worst? Turn them into interactive, in-your-face reminders with a single keystroke"
