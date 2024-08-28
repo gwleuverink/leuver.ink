@@ -23,7 +23,7 @@
         <h3 class="text-xl font-semibold text-white">Time Tracker for ClickUp</h3>
 
         <div class="text-white">
-            Frictionless real-time tracking for ClickUp
+            Frictionless cross-platform time tracking calendar for ClickUp
         </div>
 
         @if($readMore)
