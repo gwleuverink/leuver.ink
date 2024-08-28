@@ -117,6 +117,7 @@ title: Software
                 :buttons="[
                     'GitHub' => 'https://github.com/gwleuverink/livewire-property-group'
                 ]"
+                class="!bg-purple-900"
             />
         </li>
 
@@ -139,6 +140,7 @@ title: Software
                 :buttons="[
                     'GitHub' => 'https://github.com/gwleuverink/blade-hints'
                 ]"
+                class="!bg-purple-800"
             />
         </li>
 
