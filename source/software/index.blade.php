@@ -99,11 +99,11 @@ title: Software
 
         <li>
             <x-callouts.anonymous
-                title="Asset Injector"
-                x-show="matchesSearchCriteria('asset injector assetinjector laravel package tool')"
-                description="Streamline Laravel package development by automatically inserting JS and CSS into web responses. Eliminate manual asset inclusion for your users"
+                title="Livewire property groups"
+                x-show="matchesSearchCriteria('livewire group grouped property properties attribute package tool')"
+                description="Simplify property management, validation, and manipulation in Livewire components by organizing related properties into named groups"
                 :buttons="[
-                    'GitHub' => 'https://github.com/gwleuverink/asset-injector'
+                    'GitHub' => 'https://github.com/gwleuverink/livewire-property-group'
                 ]"
                 class="!bg-fuchsia-800"
             />
@@ -111,15 +111,16 @@ title: Software
 
         <li>
             <x-callouts.anonymous
-                title="Livewire property groups"
-                x-show="matchesSearchCriteria('livewire group grouped property properties attribute package')"
-                description="Simplify property management, validation, and manipulation in Livewire components by organizing related properties into named groups"
+                title="Asset Injector"
+                x-show="matchesSearchCriteria('asset injector assetinjector laravel package tool')"
+                description="Streamline Laravel package development by automatically inserting JS and CSS into web responses. Eliminate manual asset inclusion for your users"
                 :buttons="[
-                    'GitHub' => 'https://github.com/gwleuverink/livewire-property-group'
+                    'GitHub' => 'https://github.com/gwleuverink/asset-injector'
                 ]"
                 class="!bg-purple-900"
             />
         </li>
+
 
         <li>
             <x-callouts.anonymous
