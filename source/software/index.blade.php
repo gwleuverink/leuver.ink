@@ -79,6 +79,12 @@ title: Software
         </li>
 
         <li>
+            <x-callouts.phost-banner
+                x-show="matchesSearchCriteria('phost post native app nativephp email e-mail debug debugging debugger development tool smtp server')"
+            />
+        </li>
+
+        <li>
             <x-callouts.time-tracker-banner
                 read-more="true"
                 x-show="matchesSearchCriteria('native app electron clickup time tracker timetracker hours log logging sheet timesheet')"
@@ -88,12 +94,6 @@ title: Software
         <li>
             <x-callouts.workspace-banner
                 x-show="matchesSearchCriteria('workspace work space laravel package lint linter fix fixer static analysis staticanalysis ci workflows integration config tool')"
-            />
-        </li>
-
-        <li>
-            <x-callouts.phost-banner
-                x-show="matchesSearchCriteria('phost post native app nativephp email e-mail debug debugging debugger development tool smtp server')"
             />
         </li>
 

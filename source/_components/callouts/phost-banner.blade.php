@@ -20,7 +20,7 @@
         <h3 class="text-xl font-semibold text-white">Phost</h3>
 
         <div class="text-white">
-            Native app for email debugging tool and local SMTP server, developed primarily in PHP
+            Desktop app & SMTP server for receiving and debugging emails during development
         </div>
 
         <a href="https://github.com/gwleuverink/phost/releases/latest" target="_blank" class="inline-flex items-center px-4 py-2 mt-2 text-sm font-medium text-white bg-indigo-900 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
