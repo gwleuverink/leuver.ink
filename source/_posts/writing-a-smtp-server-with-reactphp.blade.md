@@ -16,7 +16,7 @@ _Here's a sneak preview of Phost in action 👀_
 
 <!-- <img src="/assets/images/phost-settings.png" alt="User preferences screenshot" /> -->
 
-In this blog post, we're going to dive into the SMTP protocol and get our hands dirty building a simple SMTP server with [ReactPHP](https://reactphp.org/). Buckle up, grab a snack, and get ready to level up your email/non-blocking PHP game!
+In this blog post, we're going to dive into the SMTP protocol and get our hands dirty building a simple SMTP server with [ReactPHP](https://reactphp.org/). Buckle up, grab a snack, and get ready to level up your PHP game!
 
 ### What we're building
 
@@ -30,13 +30,11 @@ App\Smtp\Server::new(2525)
     })->serve();
 ```
 
-I find providing callback hooks to classes to be a pretty versatile & scalable approach. It's easy to expand with additional hooks in the future & moves the responsibility for handling messages to the consuming class instead so it can be more easily extracted as a package in the futute. In Phost, I dispatch a Event from this callback.
-
-<!-- Whenever this code is invoked it executes in a non-blocking manner on a new thread that keeps running after the execution of this code finishes. All we need to do is to make sure it keeps running. -->
+I find providing callback hooks to classes to be a pretty versatile & scalable approach. It's easy to expand with additional hooks & moves the responsibility for handling messages to the consuming class instead so it can be more easily extracted as a package in the futute. In Phost, I dispatch a Event from this callback.
 
 ### Let's review the SMTP protocol
 
-The SMTP protocol built on top of the **TCP/IP protocol** that typically listens on port **25**. For the purposes of this post I'll omit the authentication handshake, since we're building a local SMTP server used for debugging there is no auth required. So, let's dig right in.
+SMTP is built on top of the **TCP/IP protocol** and typically listens on port **25**. For the purposes of this post I'll omit the authentication handshake, since we're building a local SMTP server used for debugging there is no auth required. So, let's dig right in.
 
 In essence, the SMTP protocol follows a straightforward request-response pattern between the client (sender) and the server (receiver). Here's a concise overview of the process:
 
