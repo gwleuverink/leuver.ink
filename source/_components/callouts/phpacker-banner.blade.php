@@ -8,7 +8,7 @@
     role="banner"
     {{ $attributes->class('
         transition-opacity duration-200 ease-in delay-100
-        p-6 my-10 space-x-6 select-none rounded-2xl bg-[#FFD5B4]
+        p-6 my-10 space-x-6 select-none rounded-2xl bg-gradient-to-b from-[#FFD5B4] to-[#FFB881] from-45%
     ') }}
 >
     <img class="mx-4 mt-2 mb-5 max-w-[540px]" src="/assets/images/phpacker-logo.jpg" alt="PHPacker">
