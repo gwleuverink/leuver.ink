@@ -19,12 +19,12 @@ title: About
         </div>
     </div>
 
-    <p>
+    {{-- <p>
         I'm a hands-on engineer who enjoys the challenge of driving projects from initial concept to final deployment. Leveraging the full technology stack to solve complex problems. Creative problem solving by technical means that I love to do.
-    </p>
+    </p> --}}
 
     <p>
-        With over 11 years of experience, I've attained a diverse skill set across various stacks and gained valuable perspective on the evolution of software development practices.
+        Creative problem solving by technical means that I love to do. With over 11 years of experience, I've attained a diverse skill set across various stacks and gained valuable perspective on the evolution of software development practices.
     </p>
 
     <x-separator />
