@@ -1,4 +1,4 @@
-<!-- __COMPONENT__ callouts.workspace-banner -->
+<!-- __COMPONENT__ callouts.bundle-banner -->
 
 <div
     x-transition
@@ -8,7 +8,7 @@
     role="banner"
     {{ $attributes->class('
         transition-opacity duration-200 ease-in delay-100
-        p-6 space-x-6 select-none rounded-2xl bg-indigo-900
+        p-6 my-10 space-x-6 select-none rounded-2xl bg-indigo-900
     ') }}
 >
     <img class="mx-4 mt-2 mb-5 drop-shadow-xl" src="/assets/images/bundle-logo.svg" alt="Laravel Bundle">
@@ -30,4 +30,4 @@
     </div>
 
 </div>
-<!-- __ENDCOMPONENT__ callouts.workspace-banner -->
+<!-- __ENDCOMPONENT__ callouts.bundle-banner -->

@@ -73,6 +73,12 @@ title: Software
     <ul>
 
         <li>
+            <x-callouts.phpacker-banner
+                x-show="matchesSearchCriteria('bundle laravel blade js javascript modules import export livewire package assets tool')"
+            />
+        </li>
+
+        <li>
             <x-callouts.bundle-banner
                 x-show="matchesSearchCriteria('bundle laravel blade js javascript modules import export livewire package assets tool')"
             />
