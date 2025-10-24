@@ -13,7 +13,7 @@ pagination:
 <div class="prose prose-xl">
 
     <p role="heading" aria-level="2">
-        I'm <a href="https://twitter.com/gwleuverink" target="_blank">Willem</a>, I work as a full-stack web developer <a href="https://mediacode.nl" target="_blank">@mediacode</a>. Currently enamoured with
+        I'm <a href="https://twitter.com/gwleuverink" target="_blank">Willem</a>, Freelance at Trailhead Labs, <a href="https://nativephp.com" target="_blank">NativePHP</a> core team. Currently enamoured with
         <a href="https://laravel.com" target="_blank">Laravel</a>, <a href="https://laravel-livewire.com" target="_blank">Livewire</a>, <a href="https://www.alpinejs.dev" target="_blank">AlpineJS</a> & <a href="https://tailwindcss.com" target="_blank">Tailwind</a>.
         And let me be honest for a second, this thing has grown way past affection <x-svg.heart class="inline w-6 h-6 ml-1" />
     </p>
@@ -22,9 +22,6 @@ pagination:
         So heck, you've found yourself here. Here's what you can expect: Some programming related <a href="{{ $page->baseUrl }}blog">articles</a>, Some highlighted <a href="{{ $page->baseUrl }}software">side projects</a> I work on. And how to <a href="{{ $page->baseUrl }}software/time-tracker-for-clickup">get in touch</a>.
     </p>
 
-    <p>
-        It's a bit empty here now but I have a lot of articles in the queue. Check back soon!
-    </p>
 
 </div>
 
