@@ -5,6 +5,7 @@ tags: [NativePHP, Update]
 published: true
 
 title: NativePHP for Desktop v2 Released! 🚀
+description: We're excited to announce the release of NativePHP for Desktop v2! This major version bump was necessary due to some backwards compatibility breaks, but also brings enhanced security defaults and some useful new features.
 date: 2025-10-14
 readTime: 8 minute read
 ---

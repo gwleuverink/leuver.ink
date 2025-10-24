@@ -5,6 +5,7 @@ tags: [NativePHP, Update]
 published: true
 
 title: NativePHP for Desktop - September 2025 Update
+description: This September update brings additional window management capabilities, enhanced internationalization support, and important stability improvements to help you build more reliable desktop applications with Laravel.
 date: 2025-09-17
 readTime: 6 minute read
 ---

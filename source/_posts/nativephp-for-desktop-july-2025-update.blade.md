@@ -5,6 +5,7 @@ tags: [NativePHP, Update]
 published: true
 
 title: NativePHP for Desktop - July 2025 Update
+description: These updates bring enhanced features, improved compatibility, and important dependency upgrades to help you build better desktop applications with Laravel.
 date: 2025-08-06
 readTime: 5 minute read
 ---
