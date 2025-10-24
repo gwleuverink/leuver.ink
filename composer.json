@@ -1,8 +1,14 @@
 {
+    "repositories": [
+        {
+        "type": "vcs",
+        "url": "https://github.com/gcavanunez/torchlight-jigsaw.git"
+        }
+    ],
     "require": {
-        "tightenco/jigsaw": "^1.7",
+        "tightenco/jigsaw": "^1.8",
         "ramsey/uuid": "^4.7",
-        "torchlight/torchlight-jigsaw": "^0.3",
+        "torchlight/torchlight-jigsaw": "dev-gc/jigsaw-update",
         "laravel/pint": "^1.10"
     }
 }
