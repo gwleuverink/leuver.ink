@@ -30,4 +30,6 @@ pagination:
         'paginator' => $pagination
     ])
 
+    <x-callouts.time-tracker-banner class="mt-12" />
+
 @endsection
