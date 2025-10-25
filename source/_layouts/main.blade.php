@@ -46,12 +46,14 @@
         gtag('config', 'G-3V846Y2C35');
     </script>
 
+    @viteRefresh()
+
     <!-- CSS Bundle -->
-    <link href="{{ mix('css/app.css', 'assets/build') }}" rel="stylesheet">
-    <link href="{{ mix('css/font.css', 'assets/build') }}" rel="preload stylesheet" as="style" crossorigin="anonymous" />
+    <link href="{{ vite('source/_assets/css/app.css') }}" rel="stylesheet">
+    <link href="{{ vite('source/_assets/css/font.css') }}" rel="preload stylesheet" as="style" crossorigin="anonymous" />
 
     <!-- JS Bundle -->
-    <script defer src="{{ mix('js/app.js', 'assets/build') }}"></script>
+    <script defer type="module" src="{{ vite('source/_assets/js/app.js') }}"></script>
 
     <!-- Script stack -->
     @stack('scripts')

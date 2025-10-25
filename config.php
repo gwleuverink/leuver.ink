@@ -4,7 +4,7 @@ use Illuminate\Support\Str;
 
 return [
     'production' => false,
-    'baseUrl' => 'http://localhost:3001/',
+    'baseUrl' => 'http://leuver.ink.test/',
     'title' => 'Project X',
     'description' => '',
     'siteAuthor' => 'Willem Leuverink',
@@ -21,7 +21,7 @@ return [
     ],
 
     'selected' => function ($page, $section) {
-        return $page->getPath() === $section || Str::contains($page->getPath(), ltrim($section, '/')) ? 'font-bold' : '';
+        return $page->getPath() === $section || Str::contains($page->getPath(), mb_ltrim($section, '/')) ? 'font-bold' : '';
     },
 
     'getExcerpt' => function ($page, $length = 255) {
@@ -34,7 +34,7 @@ return [
         }
 
         $content = preg_split('/<!-- more -->/m', $page->getContent(), 2);
-        $cleaned = trim(
+        $cleaned = mb_trim(
             strip_tags(
                 preg_replace(['/<pre>[\w\W]*?<\/pre>/', '/<h\d>[\w\W]*?<\/h\d>/'], '', $content[0]),
                 '<code>'

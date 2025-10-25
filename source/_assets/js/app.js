@@ -1,14 +1,14 @@
-require('./store');
+import "./store";
 
-import Alpine from 'alpinejs'
-import intersect from '@alpinejs/intersect'
-import persist from '@alpinejs/persist'
-import focus from '@alpinejs/focus'
+import Alpine from "alpinejs";
+import intersect from "@alpinejs/intersect";
+import persist from "@alpinejs/persist";
+import focus from "@alpinejs/focus";
 
-Alpine.plugin(intersect)
-Alpine.plugin(persist)
-Alpine.plugin(focus)
+Alpine.plugin(intersect);
+Alpine.plugin(persist);
+Alpine.plugin(focus);
 
-window.Alpine = Alpine
+window.Alpine = Alpine;
 
-Alpine.start()
+Alpine.start();
