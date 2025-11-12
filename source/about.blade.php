@@ -42,8 +42,8 @@ title: About
             <x-svg.social.pinkary class="size-6" />
         </a>
 
-        <a href="https://laradir.com/developers/bca3e876-7cb7-4ee3-acde-4bb461509bcf" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-125">
-            <x-svg.social.laradir class="size-6" />
+        <a href="https://laradevs.com/developers/bca3e876-7cb7-4ee3-acde-4bb461509bcf" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-125">
+            <x-svg.social.laradevs class="size-6" />
         </a>
     </div>
 
