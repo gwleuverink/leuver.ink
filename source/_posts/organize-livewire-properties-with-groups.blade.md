@@ -11,7 +11,7 @@ readTime: 6 minute read
 image: assets/images/livewire-property-groups.jpg
 ---
 
-Ever found yourself writing the same validateOnly arrays repeatedly across different methods? Or hunting through your component to figure out which properties belong to which step of your multi-step form?
+Ever found yourself writing the same validate() arrays repeatedly across different methods? Or hunting through your component to figure out which properties belong to which step of your multi-step form?
 
 Complex forms in Livewire lead to scattered validation logic where field relationships are buried in method calls rather than clearly declared.
 
@@ -89,37 +89,7 @@ Notice how each step's properties are clearly grouped and validation happens per
 
 ### The Alternative Without Groups
 
-Without property groups, you'd need to manually track which fields belong to each step:
-
-```php
-public function validateBillingStep()
-{
-    $this->validateOnly([
-        'billingName',
-        'billingAddress'
-    ]);
-}
-
-public function validateShippingStep()
-{
-    $this->validateOnly([
-        'shippingAddress',
-        'shippingMethod'
-    ]);
-}
-
-public function validatePaymentStep()
-{
-    $this->validateOnly([
-        'cardNumber',
-        'expiryDate'
-    ]);
-}
-
-// And so on for each step...
-```
-
-This approach is error-prone and doesn't scale well. Properties are referenced by string names scattered across methods - rename a property and validation breaks.
+Without property groups, you'd need to manually track which fields belong to each step. This approach is error-prone and doesn't scale well. Properties are referenced by string names scattered across methods - rename a property and validation breaks.
 
 What belongs to which step is now spread throughout your component instead of being clearly declared alongside the properties themselves. Groups allow for colocation.
 
