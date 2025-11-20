@@ -87,13 +87,7 @@ class Checkout extends Component
 
 Notice how each step's properties are clearly grouped and validation happens per-group. No more manually tracking which fields belong to which step! (Validation rules omitted for brevity - they work exactly as you'd expect.)
 
-### The Alternative Without Groups
-
-Without property groups, you'd need to manually track which fields belong to each step. This approach is error-prone and doesn't scale well. Properties are referenced by string names scattered across methods - rename a property and validation breaks.
-
-What belongs to which step is now spread throughout your component instead of being clearly declared alongside the properties themselves. Groups allow for colocation.
-
-Beyond multi-step wizards, property groups are perfect for data filter components (reset date filters separately from category filters), user profile forms with sectioned save actions, or any component where related properties need coordinated validation and manipulation.
+Beyond multi-step forms, property groups are perfect for data filter components (reset date filters separately from category filters), user profile forms with sectioned save actions, or any component where related properties need coordinated validation and manipulation.
 
 ### Works with Form Objects
 
