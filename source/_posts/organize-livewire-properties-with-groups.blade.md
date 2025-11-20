@@ -8,7 +8,22 @@ title: Organize Livewire Properties with Groups
 description: Managing complex forms with many properties in Livewire can get messy. Property groups help organize related fields for cleaner validation, manipulation, and debugging.
 date: 2025-11-19
 readTime: 6 minute read
+image: assets/images/livewire-property-groups.jpg
 ---
+
+```php
+
+#[Group('billing')]
+public $address;
+
+public function submit()
+{
+    $this->group('billing')->validate();
+
+    // ...
+}
+
+```
 
 Ever found yourself writing the same validateOnly arrays repeatedly across different methods? Or hunting through your component to figure out which properties belong to which step of your multi-step form?
 
