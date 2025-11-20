@@ -11,8 +11,13 @@ readTime: 6 minute read
 image: assets/images/livewire-property-groups.jpg
 ---
 
-```php
+Ever found yourself writing the same validateOnly arrays repeatedly across different methods? Or hunting through your component to figure out which properties belong to which step of your multi-step form?
 
+Complex forms in Livewire lead to scattered validation logic where field relationships are buried in method calls rather than clearly declared.
+
+This is exactly why I built <a href="https://github.com/gwleuverink/livewire-property-groups" target="_blank" rel="noopener">livewire-property-groups</a>. It lets you organize related properties into named groups for step-by-step validation and cleaner form management.
+
+```php
 #[Group('billing')]
 public $address;
 
@@ -22,16 +27,9 @@ public function submit()
 
     // ...
 }
-
 ```
 
-Ever found yourself writing the same validateOnly arrays repeatedly across different methods? Or hunting through your component to figure out which properties belong to which step of your multi-step form?
-
-Complex forms in Livewire lead to scattered validation logic where field relationships are buried in method calls rather than clearly declared.
-
-This is exactly why I built <a href="https://github.com/gwleuverink/livewire-property-groups" target="_blank" rel="noopener">livewire-property-groups</a>. It lets you organize related properties into named groups for step-by-step validation and cleaner form management.
-
-According to Packagist, I'm pretty much the only one using this package. I've kept it to myself for too long - time to put it in the spotlight because I genuinely think it solves a problem most Livewire developers run into at some point.
+According to Packagist, I'm pretty much the only one using this package. I've kept it to myself for too long - time to put it in the spotlight because I genuinely think it solves a problem most Livewire developers run into eventually.
 
 ### Multi-Step Checkout Example
 
@@ -124,6 +122,8 @@ public function validatePaymentStep()
 This approach is error-prone and doesn't scale well. Properties are referenced by string names scattered across methods - rename a property and validation breaks.
 
 What belongs to which step is now spread throughout your component instead of being clearly declared alongside the properties themselves. Groups allow for colocation.
+
+Beyond multi-step wizards, property groups are perfect for data filter components (reset date filters separately from category filters), user profile forms with sectioned save actions, or any component where related properties need coordinated validation and manipulation.
 
 ### Works with Form Objects
 
