@@ -50,25 +50,25 @@ class Checkout extends Component
 
     public $currentStep = 'billing';
 
-    public function nextStep()
-    {
+    public function nextStep() // [tl! **]
+    { // [tl! **]
         $steps = ['billing', 'shipping', 'payment'];
 
-        // Validate current step before advancing
-        $this->group($this->currentStep)->validate();
+        // Validate current step before advancing [tl! **]
+        $this->group($this->currentStep)->validate(); // [tl! **]
 
         // Advance step
         $currentIndex = array_search($this->currentStep, $steps);
         $this->currentStep = $steps[$currentIndex + 1] ?? $this->currentStep;
-    }
+    } // [tl! **]
 
-    public function completeOrder()
-    {
-        // Final validation of all steps
-        $this->group(['billing', 'shipping', 'payment'])->validate();
+    public function completeOrder() // [tl! focus]
+    { // [tl! focus]
+        // Final validation of all steps [tl! focus]
+        $this->group(['billing', 'shipping', 'payment'])->validate(); // [tl! focus]
 
-        //
-    }
+        // Complete order...
+    } // [tl! focus]
 }
 ```
 
@@ -128,13 +128,13 @@ class CheckoutForm extends Form
 
 class Checkout extends Component
 {
-    public CheckoutForm $checkoutForm;
+    public CheckoutForm $checkoutForm; // [tl! focus:start]
 
     public function validateBilling()
     {
         // From outside the form object
         $this->checkoutForm->group('billing')->validate();
-    }
+    } // [tl! focus:end]
 }
 ```
 
@@ -148,29 +148,38 @@ Groups come with handy methods for common operations:
 
 ```php
 // Get all properties as array
-$billingData = $this->group('billing');
+$billingData = $this->group('billing'); // [tl! highlight]
 
 // Get property names or values
-$fields = $this->group('shipping')->keys();
-$values = $this->group('payment')->values();
+$fields = $this->group('billing')->keys(); // [tl! highlight:1]
+$values = $this->group('billing')->values();
 
-// Destructuring assignment with values
-[$billingName, $billingAddress] = $this->group('billing')->values();
+// Access as array or object
+$billingName = $this->group('billing')['billingName']; // [tl! highlight:1]
+$billingName = $this->group('billing')->billingName;
 
-// Reset specific step to initial values
-$this->group('shipping')->reset();
+// Iterate over properties
+$this->group('billing')->each(fn($value, $name) => /* */); // [tl! highlight]
+
+// Validate single or multiple groups
+$this->group('billing')->validate(); // [tl! highlight:1]
+$this->group(['billing', 'shipping'])->validate();
+
+// Reset properties to initial values
+$this->group('shipping')->reset(); // [tl! highlight]
 
 // Get data and reset in one operation
-$data = $this->group('billing')->pull();
+$data = $this->group('billing')->pull(); // [tl! highlight]
+
+// Get all grouped properties (excluding non-grouped)
+$allGroups = $this->group(); // [tl! highlight]
 
 // Debug group contents (chainable)
-$this->group('payment')->dump()->validate();
-
-// Validate multiple groupsw at once
-$this->group(['billing', 'shipping'])->validate();
+$this->group('payment')->dump()->validate(); // [tl! highlight:1]
+$this->group('payment')->dd();
 ```
 
-### Debugging Made Easy
+### Debugging Helpers
 
 When developing complex forms, debugging becomes much easier with groups:
 
@@ -183,6 +192,11 @@ $validated = $this->group('payment')->dump()->validate();
 
 // Debug current step in multi-step forms
 $this->group($this->currentStep)->dump();
+
+// Dump and die in place
+$this->group('users')->each(
+    fn(User $user) => $user->notify(SomeEvent::class)
+)->dd();
 ```
 
 ### Livewire v4 Support
