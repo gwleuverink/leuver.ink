@@ -1,7 +1,7 @@
 ---
 extends: _layouts.blog
 section: article
-tags: [Livewire, Laravel, Forms]
+tags: [Livewire, Laravel, Package]
 published: true
 
 title: Organize Livewire Properties with Groups
