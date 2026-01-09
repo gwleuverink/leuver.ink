@@ -43,6 +43,6 @@ pagination:
     </a>
 </div>
 
-<x-callouts.phpacker-banner class="mt-12" />
+<x-callouts.devkeepr-banner class="mt-12" />
 
 @endsection
