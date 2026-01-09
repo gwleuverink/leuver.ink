@@ -73,6 +73,12 @@ title: Software
     <ul>
 
         <li>
+            <x-callouts.devkeepr-banner
+                x-show="matchesSearchCriteria('devkeepr local environment project scripts workflow monitor hibernation disk space development tool native app')"
+            />
+        </li>
+
+        <li>
             <x-callouts.phpacker-banner
                 x-show="matchesSearchCriteria('php cross-platform tool standalone executable binary static')"
             />
