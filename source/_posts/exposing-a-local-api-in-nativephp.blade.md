@@ -7,7 +7,7 @@ published: true
 title: Exposing a Local API in Your NativePHP App
 description: The same pattern that powers OAuth callbacks can turn your NativePHP app into something external tools can talk to. CLI scripts, IDE extensions, browser plugins, you name it.
 date: 2026-02-17
-readTime: 4 minute read
+readTime: 6 minute read
 ---
 
 In my <a href="/blog/2026-02-16/oauth-callback-server-in-nativephp/" target="_blank" rel="noopener">previous post</a> I showed how to spin up a local HTTP server for OAuth callbacks in <a href="https://nativephp.com/docs/desktop/" target="_blank" rel="noopener">NativePHP Desktop</a>. A `ChildProcess` running PHP's built-in server, bootstrapping Laravel with a dedicated route file.
