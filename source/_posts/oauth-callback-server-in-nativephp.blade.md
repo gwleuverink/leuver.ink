@@ -7,7 +7,7 @@ published: true
 title: Adding an OAuth Callback Server to Your NativePHP App
 description: NativePHP doesn't ship with OAuth support. Turns out you don't need it to. PHP's built-in server and a few lines of code is all it takes.
 date: 2026-02-16
-readTime: 8 minute read
+readTime: 5 minute read
 ---
 
 One of the most requested features for [NativePHP Desktop](https://nativephp.com/docs/desktop/) is OAuth support. Connecting your desktop app to GitHub, Google, Slack, or any other provider requires a local HTTP server to receive the callback. NativePHP doesn't ship with one.
