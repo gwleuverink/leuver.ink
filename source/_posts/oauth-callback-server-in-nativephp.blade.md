@@ -10,7 +10,7 @@ date: 2026-02-16
 readTime: 5 minute read
 ---
 
-One of the most requested features for [NativePHP Desktop](https://nativephp.com/docs/desktop/) is OAuth support. Connecting your desktop app to GitHub, Google, Slack, or any other provider requires a local HTTP server to receive the callback. NativePHP doesn't ship with one.
+One of the most requested features for <a href="https://nativephp.com/docs/desktop/" target="_blank" rel="noopener">NativePHP Desktop</a> is OAuth support. Connecting your desktop app to GitHub, Google, Slack, or any other provider requires a local HTTP server to receive the callback. NativePHP doesn't ship with one.
 
 Here's the thing though: you don't need a framework feature for this. PHP's built-in server, a `ChildProcess`, and a dedicated route file. That's it. You get a fully isolated OAuth endpoint that boots its own Laravel instance, exposes nothing else from your app, and can be started or stopped on demand.
 
@@ -116,7 +116,7 @@ Route::get('/github', function () {
 });
 ```
 
-That highlighted `event()` call is key. NativePHP dispatches all events to the main process over IPC, where Laravel handles them and [broadcasts](https://nativephp.com/docs/desktop/2/digging-deeper/broadcasting) them back to your frontend. Make your event implement `ShouldBroadcastNow`, listen for it in your Livewire component with the `native:` prefix, and the "Connect" button turns into "Connected" the moment the user completes the OAuth flow. No polling. No timers. Just events.
+That highlighted `event()` call is key. NativePHP dispatches all events to the main process over IPC, where Laravel handles them and <a href="https://nativephp.com/docs/desktop/2/digging-deeper/broadcasting" target="_blank" rel="noopener">broadcasts</a> them back to your frontend. Make your event implement `ShouldBroadcastNow`, listen for it in your Livewire component with the `native:` prefix, and the "Connect" button turns into "Connected" the moment the user completes the OAuth flow. No polling. No timers. Just events.
 
 ### Starting On Boot
 
