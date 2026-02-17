@@ -163,3 +163,7 @@ The whole thing is three files: a server class, an entry point, and a route file
 The beauty of rolling your own is that you control everything. Want to add GitLab? Add a route. Want to stop the server after the first callback? Call `stop()`. Want to run it on a specific port range? Modify `findAvailablePort()`. It's your code. Go wild.
 
 — Willem
+
+
+</article>
+<x-callouts.devkeepr-banner class="mt-12" />

@@ -115,3 +115,6 @@ The OAuth callback server was the starting point. The local API is the destinati
 Your NativePHP app doesn't have to be an island. Give it an API and let the rest of your toolchain in.
 
 — Willem
+
+</article>
+<x-callouts.devkeepr-banner class="mt-12" />
