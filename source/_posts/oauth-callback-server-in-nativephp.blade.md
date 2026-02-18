@@ -8,6 +8,7 @@ title: Adding an OAuth Callback Server to Your NativePHP App
 description: NativePHP doesn't ship with OAuth support. Turns out you don't need it to. PHP's built-in server and a few lines of code is all it takes.
 date: 2026-02-16
 readTime: 5 minute read
+image: assets/videos/oauth-demo-poster.jpg
 ---
 
 <video controls playsinline poster="/assets/videos/oauth-demo-poster.jpg" style="width:100%; border-radius:8px;">
