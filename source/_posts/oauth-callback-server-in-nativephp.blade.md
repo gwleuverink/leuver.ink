@@ -10,6 +10,10 @@ date: 2026-02-16
 readTime: 5 minute read
 ---
 
+<video controls playsinline style="width:100%; border-radius:8px;">
+    <source src="/assets/videos/oauth-demo.mp4" type="video/mp4">
+</video>
+
 One of the most requested features for <a href="https://nativephp.com/docs/desktop/" target="_blank" rel="noopener">NativePHP Desktop</a> is OAuth support. Connecting your desktop app to GitHub, Google, Slack, or any other provider requires a local HTTP server to receive the callback. NativePHP doesn't ship with one.
 
 Here's the thing though: you don't need a framework feature for this. PHP's built-in server, a `ChildProcess`, and a dedicated route file. That's it. You get a fully isolated OAuth endpoint that boots its own Laravel instance, exposes nothing else from your app, and can be started or stopped on demand.
