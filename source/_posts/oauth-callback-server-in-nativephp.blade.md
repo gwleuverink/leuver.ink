@@ -137,16 +137,22 @@ Or don't start it on boot. Start it when the user navigates to your settings pag
 
 ```php
 // In a Livewire component
+use Laravel\Socialite\Socialite;
 use Native\Desktop\Facades\Shell;
 use App\Services\OAuth\OAuthServer;
 
 public function connectGitHub(OAuthServer $server)
 {
     $server->start();
+    $callback = $server->callbackUrl('github');
 
-    Shell::openExternal(
-        "https://github.com/login/oauth/authorize?redirect_uri={$server->callbackUrl('github')}"
-    );
+    $authUrl = Socialite::driver('github')
+        ->redirectUrl($callback)
+        ->stateless()
+        ->redirect()
+        ->getTargetUrl();
+
+    Shell::openExternal($authUrl);
 }
 ```
 
