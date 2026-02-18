@@ -13,8 +13,8 @@
 >
 
     <div class="flex items-center flex-shrink-0 mb-6 sm:mb-0">
-        <img class="h-28 drop-shadow-xl" src="/assets/images/devkeepr-logo.png" alt="Devkeepr logo">
-        <h3 class="ml-2.5 text-6xl tracking-tighter font-semibold text-white">Devkeepr</h3>
+        <img class="h-20 sm:h-28 drop-shadow-xl" src="/assets/images/devkeepr-logo.png" alt="Devkeepr logo">
+        <h3 class="ml-2.5 text-5xl sm:text-6xl tracking-tighter font-semibold text-white">Devkeepr</h3>
     </div>
 
 
