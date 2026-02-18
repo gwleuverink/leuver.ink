@@ -10,7 +10,7 @@ date: 2026-02-16
 readTime: 5 minute read
 ---
 
-<video controls playsinline style="width:100%; border-radius:8px;">
+<video controls playsinline poster="/assets/videos/oauth-demo-poster.jpg" style="width:100%; border-radius:8px;">
     <source src="/assets/videos/oauth-demo.mp4" type="video/mp4">
 </video>
 
