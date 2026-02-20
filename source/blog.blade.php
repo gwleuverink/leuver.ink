@@ -20,7 +20,6 @@ pagination:
 
         <x-highlight-banner>
             <p>You've reached the end. I've got a lot more TALL stack & Laravel related articles in the queue. Subscribe to <a href="/feed.atom">the feed</a> to get notified.</p>
-
         </x-highlight-banner>
 
     @endif

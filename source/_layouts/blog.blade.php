@@ -16,7 +16,7 @@
             <time datetime="{{ date('Y-m-d\TH:i:s') }}">{{ date('F j, Y', $page->date) }}</time> – {{ $page->readTime }}
         </p>
 
-        <a href="{{ $page->getUrl() }}.md" target="_blank" class="px-1.5 py-0.5 text-xs font-mono rounded-sm text-gray-500 dark:text-slate-400 hover:text-purple-500 hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+        <a href="{{ $page->getUrl() }}.md" target="_blank" class="px-1.5 py-0.5 text-sm font-mono rounded-sm text-gray-500 dark:text-slate-400 hover:text-purple-500 hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
             [ .md ]
         </a>
     </div>
