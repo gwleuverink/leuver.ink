@@ -1,5 +1,6 @@
 <?php
 
+use Hooks\GenerateMarkdownForPosts;
 use TightenCo\Jigsaw\Jigsaw;
 use Torchlight\Jigsaw\TorchlightExtension;
 
@@ -18,3 +19,7 @@ use Torchlight\Jigsaw\TorchlightExtension;
  */
 
 TorchlightExtension::make($container, $events)->boot();
+
+$events->afterBuild(function (Jigsaw $jigsaw) {
+    GenerateMarkdownForPosts::build($jigsaw);
+});

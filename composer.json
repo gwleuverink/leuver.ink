@@ -5,6 +5,11 @@
         "url": "https://github.com/gcavanunez/torchlight-jigsaw.git"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Hooks\\": "hooks/"
+        }
+    },
     "require": {
         "tightenco/jigsaw": "^1.8",
         "ramsey/uuid": "^4.7",
