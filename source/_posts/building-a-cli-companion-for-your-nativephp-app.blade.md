@@ -8,7 +8,7 @@ title: Building a CLI Companion for Your NativePHP App
 description: "Your NativePHP app has a SQLite database and can run a local API. That's all you need to build a CLI companion that extends your desktop app into the terminal."
 date: 2026-03-12
 readTime: 10 minute read
-image: assets/images/dk-search-dark.png
+image: assets/images/dk-list-dark.png
 ---
 
 In the <a href="/blog/2026-02-16/oauth-callback-server-in-nativephp/" target="_blank" rel="noopener">first post</a> of this series I showed how to spin up a local HTTP server inside a NativePHP app for OAuth callbacks. In the <a href="/blog/2026-02-17/exposing-a-local-api-in-nativephp/" target="_blank" rel="noopener">second</a>, I turned that into a local API that external tools can talk to.
