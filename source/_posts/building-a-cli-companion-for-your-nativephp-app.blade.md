@@ -15,7 +15,7 @@ In the <a href="/blog/2026-02-16/oauth-callback-server-in-nativephp/" target="_b
 
 This post ties it all together: a CLI companion that extends your desktop app into the terminal. Your NativePHP app already ships with PHP, so you can build a standalone CLI powered by that bundled binary. No PHP required on the user's machine. Think <a href="https://phpacker.dev" target="_blank" rel="noopener">phpacker</a>, but backed by your app's database and local API, with full <a href="https://laravel.com/docs/prompts" target="_blank" rel="noopener">Laravel Prompts</a> support.
 
-The interesting part isn't what any specific CLI does. It's how a standalone executable discovers and communicates with a desktop application that may or may not be running.
+The examples are taken from <a href="https://devkeepr.app" target="_blank" rel="noopener">Devkeepr</a>, a NativePHP desktop app I'm building for managing local dev environments. But the interesting part isn't what this specific CLI does. It's how a standalone executable discovers and communicates with a desktop application that may or may not be running.
 
 <img class="rounded-xl dark:hidden" src="/assets/images/cli-install-light.png" alt="CLI install prompt">
 <img class="rounded-xl drop-shadow-2xl hidden dark:block" src="/assets/images/cli-install-dark.png" alt="CLI install prompt">
@@ -191,30 +191,15 @@ $app->addCommand(new ParkCommand($client));
 $app->setDefaultCommand('cd'); // [tl! highlight]
 ```
 
-### The Commands
+### Database Commands
 
-The HTTP client is deliberately simple. No Guzzle, no external library. Just `file_get_contents` with a stream context pointing at `127.0.0.1`. If the request fails, the app isn't running.
+Some commands don't need the running app at all. They query SQLite directly and skip the API entirely.
 
-Commands that need the running app just make an HTTP request. For longer operations, `spin()` gives you a loading indicator:
-
-```php
-$response = spin(
-    fn () => $this->client->post('/hibernate', ['path' => $path], timeout: 300), // [tl! highlight]
-    'Hibernating project...'
-);
-```
-
-The more interesting commands don't need the API at all. Here's one that queries SQLite directly, presents an interactive search with <a href="https://laravel.com/docs/prompts" target="_blank" rel="noopener">Laravel Prompts</a>, and opens a subshell in the selected directory:
+The `cd` command is a good example. It queries the project database, presents an interactive search with <a href="https://laravel.com/docs/prompts" target="_blank" rel="noopener">Laravel Prompts</a>, and opens a subshell in the selected directory:
 
 ```php
 class ChangeDirectoryCommand extends Command
 {
-    public function __construct(
-        protected CliClient $client,
-    ) {
-        parent::__construct();
-    }
-
     protected function configure(): void
     {
         $this->setName('cd')
@@ -258,6 +243,54 @@ No HTTP involved. The desktop app doesn't even know about it. If the search term
 
 <img class="dark:hidden" src="/assets/images/dk-search-light.png" alt="CLI search prompt">
 <img class="hidden dark:block" src="/assets/images/dk-search-dark.png" alt="CLI search prompt">
+
+### API Commands
+
+Commands that change state need the running app. The HTTP client is deliberately simple — no Guzzle, no external library. Just `file_get_contents` with a stream context pointing at `127.0.0.1`. If the request fails, the app isn't running.
+
+For longer operations like hibernation, `spin()` from Laravel Prompts gives you a loading indicator while the request blocks:
+
+```php
+$response = spin(
+    fn () => $this->client->post('/hibernate', ['path' => $path], timeout: 300),
+    'Hibernating project...'
+);
+```
+
+Because the API server runs a full Laravel instance, these requests can dispatch jobs, fire events, and broadcast to the desktop UI. The user runs a command in their terminal, and the app reacts in real time.
+
+Take that same hibernation command. The controller dispatches the job synchronously, which does the heavy lifting — removing `vendor/`, `node_modules/`, whatever the project's stack dictates. When it's done, it fires a `HibernatedProject` event:
+
+```php
+class HibernatedProject
+{
+    use Dispatchable;
+
+    public function __construct(
+        public string $path,
+        public int $bytesSaved,
+    ) {}
+
+    public function broadcastOn(): array // [tl! highlight:3]
+    {
+        return [new Channel('nativephp')];
+    }
+}
+```
+
+NativePHP picks up any event broadcast on the `nativephp` channel and pushes it to the frontend over IPC. In your Livewire component, you listen for it with the `native:` prefix:
+
+```php
+#[On('native:' . HibernatedProject::class)] // [tl! highlight]
+public function onProjectHibernated(string $path): void
+{
+    // The UI updates instantly
+}
+```
+
+The user types `dk hibernate` in their terminal. The CLI hits the API. The API dispatches the job. The job fires an event. The event broadcasts to the frontend. The desktop app updates. No polling, no refresh button. The terminal drives the app.
+
+This works for any write operation. `dk link` registers a project and the overview page reflects it. `dk wake` restores dependencies and the project card updates its status. The CLI and the desktop app stay in sync through events, not through the CLI knowing anything about the UI.
 
 ### Installation
 
