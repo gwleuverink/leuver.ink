@@ -321,9 +321,9 @@ Run the `list` command to verify everything is working 🧑‍🍳😙🤌
 
 ### Wrapping Up
 
-None of this, except the server, requires special NativePHP features. It's PHP, bash, SQLite, and HTTP, wired together in a way that turns a desktop application into something you can script from anywhere on your machine.
+Apart from the server, none of this requires special NativePHP features. It's PHP, bash, SQLite, and HTTP, wired together in a way that turns a desktop application into something you can fully drive from your terminal.
 
-The key insight: most CLI operations can just read the database directly. The API is only necessary when changes need to reach the running app. That keeps the CLI fast and the architecture simple.
+And while Laravel Prompts is a great fit here, you could swap it for any CLI framework. Bubbletea, ratatui, or just plain bash. The architecture doesn't care what draws the UI. The world is your oyster 🦪
 
 — Willem
 
