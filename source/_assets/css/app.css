@@ -94,6 +94,13 @@ html.dark .torchlight {
 html:not(.dark) .torchlight {
   @apply !bg-slate-700;
 }
+/* Override theme purple highlight to match custom backgrounds */
+html:not(.dark) .torchlight .line-highlight.line-has-background {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+html.dark .torchlight .line-highlight.line-has-background {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
 
 /*
   Blur and dim the lines that don't have the `.line-focus` class,
