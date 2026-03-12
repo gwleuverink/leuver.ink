@@ -321,7 +321,7 @@ Run the `list` command to verify everything is working 🧑‍🍳😙🤌
 
 ### Wrapping Up
 
-None of this requires special NativePHP features. It's PHP, bash, SQLite, and HTTP, wired together in a way that turns a desktop application into something you can script from anywhere on your machine.
+None of this, except the server, requires special NativePHP features. It's PHP, bash, SQLite, and HTTP, wired together in a way that turns a desktop application into something you can script from anywhere on your machine.
 
 The key insight: most CLI operations can just read the database directly. The API is only necessary when changes need to reach the running app. That keeps the CLI fast and the architecture simple.
 
