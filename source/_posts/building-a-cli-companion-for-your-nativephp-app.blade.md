@@ -164,7 +164,7 @@ $capsule->addConnection([
 $capsule->bootEloquent();
 ```
 
-The application extends Symfony's `Application` with `cd` as the default command. Running `dk` with no arguments opens interactive project search, and any unrecognized command is treated as a search term. `dk myproject` doesn't throw an error, it searches your projects and teleports you there.
+The application extends Symfony's `Application` with `cd` as the default command. Any unrecognized command is treated as a search term, so `dk myproject` searches your projects and teleports you there.
 
 ```php
 $app = new class('Devkeepr CLI') extends Application
@@ -246,7 +246,7 @@ No HTTP involved. The desktop app doesn't even know about it. If the search term
 
 ### API Commands
 
-Commands that change state need the running app. The HTTP client is deliberately simple — no Guzzle, no external library. Just `file_get_contents` with a stream context pointing at `127.0.0.1`. If the request fails, the app isn't running.
+Commands that change state need the running app. The HTTP client is deliberately simple: no Guzzle, no external library. Just `file_get_contents` with a stream context pointing at `127.0.0.1`. If the request fails, the app isn't running.
 
 For longer operations like hibernation, `spin()` from Laravel Prompts gives you a loading indicator while the request blocks:
 
@@ -259,7 +259,7 @@ $response = spin(
 
 Because the API server runs a full Laravel instance, these requests can dispatch jobs, fire events, and broadcast to the desktop UI. The user runs a command in their terminal, and the app reacts in real time.
 
-Take that same hibernation command. The controller dispatches the job synchronously, which does the heavy lifting — removing `vendor/`, `node_modules/`, whatever the project's stack dictates. When it's done, it fires a `HibernatedProject` event:
+The controller dispatches the hibernation job synchronously, does the heavy lifting, and fires a `HibernatedProject` event when it's done:
 
 ```php
 class HibernatedProject
