@@ -1,7 +1,7 @@
 ---
 extends: _layouts.blog
 section: article
-tags: [NativePHP, Laravel, OAuth]
+tags: [Series, NativePHP, Laravel, OAuth]
 published: true
 
 title: Adding an OAuth Callback Server to Your NativePHP App

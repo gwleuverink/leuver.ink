@@ -29,6 +29,6 @@ pagination:
         'paginator' => $pagination
     ])
 
-    <x-callouts.time-tracker-banner class="mt-12" />
+    <x-callouts.phpacker-banner class="mt-12" />
 
 @endsection

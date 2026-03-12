@@ -1,7 +1,7 @@
 ---
 extends: _layouts.blog
 section: article
-tags: [NativePHP, Laravel, API]
+tags: [Series, NativePHP, Laravel, API]
 published: true
 
 title: Exposing a Local API in Your NativePHP App
