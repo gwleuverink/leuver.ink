@@ -5,20 +5,31 @@ import os from "os";
 import path from "path";
 
 const host = "leuver.ink.test";
-const certPath = path.resolve(
+
+// Serve dev assets over https using Herd's certificate, so the
+// https page doesn't block them as mixed content. Certs only
+// exist on the local machine, not on CI.
+const key = path.resolve(
   os.homedir(),
-  "Library/Application Support/Herd/config/valet/Certificates"
+  `Library/Application Support/Herd/config/valet/Certificates/${host}.key`
+);
+const cert = path.resolve(
+  os.homedir(),
+  `Library/Application Support/Herd/config/valet/Certificates/${host}.crt`
 );
 
 export default defineConfig({
-  server: {
-    host,
-    hmr: { host },
-    https: {
-      key: fs.readFileSync(path.resolve(certPath, `${host}.key`)),
-      cert: fs.readFileSync(path.resolve(certPath, `${host}.crt`)),
-    },
-  },
+  server:
+    fs.existsSync(key) && fs.existsSync(cert)
+      ? {
+          host,
+          hmr: { host },
+          https: {
+            key: fs.readFileSync(key),
+            cert: fs.readFileSync(cert),
+          },
+        }
+      : {},
   plugins: [
     jigsaw({
       input: [
