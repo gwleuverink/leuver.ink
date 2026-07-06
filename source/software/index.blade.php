@@ -74,7 +74,7 @@ title: Software
 
         <li>
             <x-callouts.devkeepr-banner
-                x-show="matchesSearchCriteria('devkeepr local environment project scripts workflow monitor hibernation disk space development tool native app')"
+                x-show="matchesSearchCriteria('devkeepr projects one home terminals scripts dependencies workflow monitor hibernation disk space git sync development tool native app')"
             />
         </li>
 

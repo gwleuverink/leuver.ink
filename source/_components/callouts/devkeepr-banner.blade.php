@@ -19,7 +19,7 @@
 
 
     <div class="mt-2 mb-1 text-white">
-        Your local environment supercharged. Run project scripts, monitor workflows, and intelligently manage disk space through smart hibernation
+        All your projects, one home. Terminals, scripts and dependencies in a single interface, plus smart hibernation that reclaims disk space
     </div>
 
     <div>
