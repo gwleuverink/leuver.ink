@@ -112,6 +112,8 @@ Three lines, hiding two lessons I learned the hard way.
 
 **`rm -f public/hot`** removes Vite's hot file. If you've been running `npm run dev`, that file is still sitting in your public folder, and Laravel will happily render every asset URL pointing at your local dev server. Your production site then tries to load CSS from `localhost:5173`. Delete it before exporting, every time.
 
+You might've noticed the export config also excludes this file. That only keeps it out of the `dist` folder. Laravel checks whether the file exists while rendering, so it has to be gone before the export starts. The exclude pattern is just a safety net.
+
 **The inline environment variables** override your local `.env` for this one command. `APP_URL` matters because the exported HTML bakes in absolute URLs for canonical tags, og-images and sitemaps. `APP_ENV=production` makes sure no debug output leaks into your static pages. Your local `.env` stays untouched, so local dev keeps working like nothing happened.
 
 At this point `composer build` gives you a `dist` folder you could drag onto any static host. But we're not dragging anything anywhere.
