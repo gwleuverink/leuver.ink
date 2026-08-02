@@ -11,6 +11,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    {{--
+        Settles the theme before the first paint. Alpine only reaches the
+        store after the page has already been drawn, so leaving this to
+        it shows every dark visitor a white page first.
+    --}}
+    <script>
+        (() => {
+            const stored = localStorage.getItem('dark-mode')
+
+            document.documentElement.classList.toggle('dark', stored === null
+                ? window.matchMedia('(prefers-color-scheme: dark)').matches
+                : stored === 'true'
+            )
+        })()
+    </script>
+
     <title>{{ $page->title }}</title>
     <meta name="description" content="{{ $page->description }}">
 
