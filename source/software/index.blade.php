@@ -110,8 +110,14 @@ title: Software
         </li>
 
         <li>
-            <x-callouts.workspace-banner
+            <x-callouts.anonymous
+                title="Workspace for Laravel"
                 x-show="matchesSearchCriteria('workspace work space laravel package lint linter fix fixer static analysis staticanalysis ci workflows integration config tool')"
+                description="Sync linters, fixers, static analysis, CI workflows and editor integration configs across all your teams & projects"
+                :buttons="[
+                    'Docs' => 'https://media-code.github.io/workspace/',
+                    'GitHub' => 'https://github.com/media-code/workspace'
+                ]"
             />
         </li>
 
@@ -123,7 +129,6 @@ title: Software
                 :buttons="[
                     'GitHub' => 'https://github.com/gwleuverink/livewire-property-group'
                 ]"
-                class="!bg-fuchsia-800"
             />
         </li>
 
@@ -135,7 +140,6 @@ title: Software
                 :buttons="[
                     'GitHub' => 'https://github.com/gwleuverink/asset-injector'
                 ]"
-                class="!bg-purple-900"
             />
         </li>
 
@@ -159,7 +163,6 @@ title: Software
                 :buttons="[
                     'GitHub' => 'https://github.com/gwleuverink/blade-hints'
                 ]"
-                class="!bg-purple-800"
             />
         </li>
 

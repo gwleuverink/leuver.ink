@@ -55,7 +55,7 @@
             ])
         }}`),
     }"
-    class="fixed inset-0 flex items-center justify-center bg-white dark:bg-slate-900"
+    class="fixed inset-0 flex items-center justify-center bg-[#f5f6fb] dark:bg-[#0c0d15]"
     role="alertdialog"
 >
     <div class="prose prose-2xl">

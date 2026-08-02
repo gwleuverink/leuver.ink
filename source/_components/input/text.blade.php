@@ -6,7 +6,7 @@
 <input
     {{ $attributes->merge([
         'type' => 'text',
-        'class' => 'dark:bg-slate-800 dark:text-white dark:border-slate-700 bg-transparent block w-full text-lg -skew-x-[4deg] transform-gpu border-slate-300 shadow-sm focus:border-pink-500 focus:ring-pink-500 focus:animate-pulse'
+        'class' => 'bg-white border-black/10 shadow-sm placeholder:text-gray-400 dark:bg-white/[0.04] dark:border-white/10 dark:shadow-none dark:text-white dark:placeholder:text-slate-500 block w-full text-lg -skew-x-[4deg] transform-gpu focus:border-pink-500 focus:ring-pink-500 focus:animate-pulse'
     ]) }}
     :disabled="state.success || state.submitting || @js($disabled)"
     :id="$id('input')"

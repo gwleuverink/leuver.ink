@@ -42,8 +42,15 @@ pagination:
 @endforeach
 
 <div class="flex justify-center my-8">
-    <a href="/blog" class="flex items-center px-4 py-2 mt-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-        Check the full archive of articles
+    <a
+        href="/blog"
+        class="inline-flex items-center px-[18px] py-2.5 text-[15px] font-semibold transition-colors rounded-lg group text-pink-600 hover:text-pink-700 bg-white ring-1 ring-black/5 hover:ring-black/10 shadow-sm dark:text-pink-400 dark:hover:text-pink-300 dark:bg-white/[0.04] dark:hover:bg-white/[0.08] dark:ring-white/10 dark:shadow-none focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
+    >
+        Check the full archive
+
+        <svg class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2 8h11M9 4l4 4-4 4" />
+        </svg>
     </a>
 </div>
 

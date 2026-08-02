@@ -59,10 +59,12 @@
     @stack('scripts')
 </head>
 
-<body class="font-sans antialiased text-gray-900 transition-colors bg-white dark:text-gray-100 dark:bg-slate-900">
+<body class="font-sans antialiased text-gray-900 transition-colors bg-[#f5f6fb] dark:text-gray-100 dark:bg-[#0c0d15]">
+
+    <x-blob-field />
 
     <!-- WRAPPER -->
-    <div class="max-w-xl mx-auto md:max-w-6xl">
+    <div class="relative z-10 max-w-xl mx-auto md:max-w-6xl">
 
         <header class="px-4 mt-8 mb-8 leading-tight md:mt-12 sm:mb-12 md:mb-16 md:px-8">
 

@@ -119,3 +119,118 @@ html.dark .torchlight .line-highlight.line-has-background {
   filter: blur(0px);
   opacity: 1;
 }
+
+/*
+|--------------------------------------------------------------------------
+| Ambient light
+|--------------------------------------------------------------------------
+|
+| Carried over from Trailhead Labs so both sites read as one hand. The
+| field is clipped to the viewport so the oversized blobs never
+| widen the document, and it only lights up in dark mode.
+|
+*/
+@keyframes drift-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(-50px, 35px) scale(1.04); }
+  66%      { transform: translate(35px, -25px) scale(0.97); }
+}
+@keyframes drift-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(40px, -35px) scale(0.96); }
+  66%      { transform: translate(-30px, 45px) scale(1.03); }
+}
+@keyframes drift-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(-25px, -40px) scale(1.05); }
+}
+
+.blob-field {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* The outer element holds the position, the inner one keeps drifting. */
+.blob {
+  position: absolute;
+  pointer-events: none;
+}
+.blob > i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  filter: blur(120px);
+  will-change: transform;
+}
+
+/*
+  All three stay out at the edges. The middle belongs to the writing,
+  and light that reaches it competes with the reading.
+*/
+
+/* Indigo, straight off the business site. */
+.blob-1 {
+  width: 650px;
+  height: 650px;
+  top: -220px;
+  right: -180px;
+}
+.blob-1 > i {
+  animation: drift-1 28s ease-in-out infinite;
+}
+
+/* The violet both sites already share. */
+.blob-2 {
+  width: 520px;
+  height: 520px;
+  bottom: -160px;
+  left: -160px;
+}
+.blob-2 > i {
+  animation: drift-2 34s ease-in-out infinite;
+}
+
+/* A little of this site's own warmth, kept out on the margin. */
+.blob-3 {
+  width: 600px;
+  height: 600px;
+  top: 45%;
+  right: -240px;
+}
+.blob-3 > i {
+  animation: drift-3 24s ease-in-out infinite;
+}
+
+/*
+  Dark burns the deep end of each hue, since the light has to arrive
+  out of near black. Light needs the same three hues pitched up and
+  thinned out, because white shows a tint far sooner than black
+  shows a glow. Same room either way, different lamps.
+*/
+html.dark .blob-1 > i {
+  background: rgba(48, 52, 127, 0.16);
+}
+html.dark .blob-2 > i {
+  background: rgba(60, 20, 100, 0.12);
+}
+html.dark .blob-3 > i {
+  background: radial-gradient(circle at 50% 45%, rgba(224, 138, 95, 0.10), rgba(190, 60, 120, 0.05) 70%);
+}
+
+html:not(.dark) .blob-1 > i {
+  background: rgba(99, 102, 241, 0.22);
+}
+html:not(.dark) .blob-2 > i {
+  background: rgba(168, 85, 247, 0.16);
+}
+html:not(.dark) .blob-3 > i {
+  background: radial-gradient(circle at 50% 45%, rgba(251, 146, 60, 0.20), rgba(236, 72, 153, 0.10) 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob > i { animation: none; }
+}
