@@ -5,7 +5,7 @@ tags: [Laravel, Deployment, Static, Hosting]
 published: true
 
 title: Host Any Laravel Website Free on GitHub Pages
-description: Skip the static site generator. A plain Laravel app, exported to static HTML and deployed to GitHub Pages straight from your terminal for free. Nothing new to learn, nothing to pay.
+description: Skip the static site generator. A plain Laravel app, exported to static HTML and deployed to GitHub Pages straight from your terminal for free. Nothing new to learn, nothing to pay, and no rewrite the day it needs a server.
 date: 2026-07-16
 readTime: 7 minute read
 ---
@@ -46,6 +46,8 @@ Landing page response times sit between **30 and 60 milliseconds**. No PHP to bo
 No PHP runs at request time, so anything dynamic is out. Forms, auth, sessions, queues. If your site needs those, this isn't your deploy strategy.
 
 In practice the line is easy to draw. A contact form can post to a service like Formspree or just be a `mailto:` link. Everything else, rendering markdown, looping over content, pulling data from an API at build time, works exactly like it always did. The site rebuilds when you publish, not when someone visits.
+
+And when that line eventually moves, you're not stuck. The day the site needs a real form, a login, or a dashboard, you deploy the same repo to a server and it's a Laravel app again. Same routes, same views, same URLs, nothing to port. You just stop running the export. That's the part a static site generator can't offer you: outgrowing it means rewriting the whole thing.
 
 Sold? Good. Let's build it.
 
@@ -162,7 +164,7 @@ Note that GitHub Pages is free for public repos. Private repos need a paid plan.
 
 Static site generators solve a real problem, but they all charge the same tax: another tool, another set of docs, another "how did this work again" six months later. This approach charges nothing. One package, two composer scripts, and everything else was Laravel all along.
 
-Full Laravel while writing, static HTML while serving, and a hosting bill of exactly zero.
+Full Laravel while writing, static HTML while serving, a hosting bill of exactly zero, and no rewrite waiting for you the day it needs a server.
 
 Next time you reach for a static site generator (or worse, a VPS) for a five-page marketing site, don't. Type `composer publish` and go do something fun instead.
 
